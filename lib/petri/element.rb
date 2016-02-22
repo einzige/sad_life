@@ -2,7 +2,7 @@ module Petri
   class Element
     attr_reader :net
 
-    # @param net [Petri::Net]
+    # @param net [Net]
     def initialize(net)
       @net = net
     end
