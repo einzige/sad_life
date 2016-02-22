@@ -1,0 +1,57 @@
+{
+  "places": [
+    {
+      "guid": "cc0e3650-d951-11e5-a7b6-0d487dccd14c",
+      "title": "place",
+      "x": 241,
+      "y": 265,
+      "start": true
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "d01e1940-d951-11e5-a7b6-0d487dccd14c",
+      "title": "A",
+      "x": 405,
+      "y": 169,
+      "action": "a\n"
+    },
+    {
+      "guid": "d1488f80-d951-11e5-a7b6-0d487dccd14c",
+      "title": "B",
+      "x": 406,
+      "y": 250,
+      "action": "b"
+    },
+    {
+      "guid": "d338c6c0-d951-11e5-a7b6-0d487dccd14c",
+      "title": "C",
+      "x": 405,
+      "y": 329,
+      "action": "c"
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "d01e6760-d951-11e5-a7b6-0d487dccd14c",
+      "from_guid": "cc0e3650-d951-11e5-a7b6-0d487dccd14c",
+      "to_guid": "d01e1940-d951-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "d148dda0-d951-11e5-a7b6-0d487dccd14c",
+      "from_guid": "cc0e3650-d951-11e5-a7b6-0d487dccd14c",
+      "to_guid": "d1488f80-d951-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "d33914e0-d951-11e5-a7b6-0d487dccd14c",
+      "from_guid": "cc0e3650-d951-11e5-a7b6-0d487dccd14c",
+      "to_guid": "d338c6c0-d951-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}
