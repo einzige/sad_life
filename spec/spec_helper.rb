@@ -26,3 +26,15 @@ Framework::Application.new(env: 'test') do |app|
   app.init!
   app.hint("Running tests")
 end
+
+# @param name [String]
+# @return [String]
+def load_fixture(name)
+  File.new(File.expand_path("../fixtures/#{name}", __FILE__)).read
+end
+
+# @param fixture_name [String]
+# @return [Petri::Net]
+def load_net(fixture_name)
+  Petri::Net.from_string(load_fixture("#{fixture_name}.bpf"))
+end

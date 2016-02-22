@@ -1,0 +1,29 @@
+{
+  "places": [
+    {
+      "guid": "008c7570-d959-11e5-a7b6-0d487dccd14c",
+      "title": "place",
+      "x": 81,
+      "y": 159,
+      "start": true
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "03500240-d959-11e5-a7b6-0d487dccd14c",
+      "title": "Transition",
+      "x": 150,
+      "y": 144,
+      "action": "t"
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "03507770-d959-11e5-a7b6-0d487dccd14c",
+      "from_guid": "008c7570-d959-11e5-a7b6-0d487dccd14c",
+      "to_guid": "03500240-d959-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}
