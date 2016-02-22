@@ -39,12 +39,6 @@ module Petri
       nil
     end
 
-    # Assigns arc distance weights
-    def index_distances
-      arcs.each(&:reset_distance_weight)
-      start_place.index_output_arc_distance_weights
-    end
-
     # @return [Place]
     def start_place
       start_places = @places.select(&:start?)

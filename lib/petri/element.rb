@@ -9,5 +9,13 @@ module Petri
       @data = data.symbolize_keys || {}
       @guid ||= data[:guid] if data[:guid]
     end
+
+    def [](key)
+      @data[key]
+    end
+
+    def []=(k, v)
+      @data[k] = v
+    end
   end
 end

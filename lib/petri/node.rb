@@ -25,13 +25,5 @@ module Petri
     def output_nodes
       output_arcs.map(&:to_node)
     end
-
-    # Fills the graph with arc weights used to find shortest paths
-    # @param weight [Integer]
-    def index_output_arc_distance_weights(weight = 0)
-      output_arcs.each do |arc|
-        arc.index_distance_weight(weight)
-      end
-    end
   end
 end
