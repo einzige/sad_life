@@ -54,4 +54,19 @@ describe Petri::Net do
       subject.tokens[0].place.must_equal place
     end
   end
+
+  describe '#remove_token' do
+    subject { Petri::Net.new }
+    let(:place) { Petri::Place.new(subject) }
+    let(:place_2) { Petri::Place.new(subject) }
+
+    it 'adds a token' do
+      subject.put_token(place)
+      subject.put_token(place_2)
+      subject.tokens.count.must_equal 2
+      subject.remove_token(place)
+      subject.tokens.count.must_equal 1
+      subject.tokens.first.place.must_equal place_2
+    end
+  end
 end

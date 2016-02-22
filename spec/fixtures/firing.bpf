@@ -1,0 +1,84 @@
+{
+  "places": [
+    {
+      "guid": "51d26c90-d964-11e5-a7b6-0d487dccd14c",
+      "title": "in1",
+      "x": 163,
+      "y": 275,
+      "start": true
+    },
+    {
+      "guid": "51d26c91-d964-11e5-a7b6-0d487dccd14c",
+      "title": "out1",
+      "x": 405,
+      "y": 251,
+      "start": false,
+      "finish": false
+    },
+    {
+      "guid": "59945b00-d964-11e5-a7b6-0d487dccd14c",
+      "title": "out2",
+      "x": 404,
+      "y": 316
+    },
+    {
+      "guid": "5ad73b40-d964-11e5-a7b6-0d487dccd14c",
+      "title": "out3",
+      "x": 404,
+      "y": 384
+    },
+    {
+      "guid": "7e27c240-d964-11e5-a7b6-0d487dccd14c",
+      "title": "in2",
+      "x": 163,
+      "y": 371,
+      "start": true,
+      "finish": false
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "581e35c0-d964-11e5-a7b6-0d487dccd14c",
+      "title": "t",
+      "x": 271,
+      "y": 299
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "581eaaf0-d964-11e5-a7b6-0d487dccd14c",
+      "from_guid": "51d26c90-d964-11e5-a7b6-0d487dccd14c",
+      "to_guid": "581e35c0-d964-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "59948210-d964-11e5-a7b6-0d487dccd14c",
+      "from_guid": "581e35c0-d964-11e5-a7b6-0d487dccd14c",
+      "to_guid": "59945b00-d964-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "5ad76250-d964-11e5-a7b6-0d487dccd14c",
+      "from_guid": "581e35c0-d964-11e5-a7b6-0d487dccd14c",
+      "to_guid": "5ad73b40-d964-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "60466010-d964-11e5-a7b6-0d487dccd14c",
+      "from_guid": "581e35c0-d964-11e5-a7b6-0d487dccd14c",
+      "to_guid": "51d26c91-d964-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "85b3d3a0-d964-11e5-a7b6-0d487dccd14c",
+      "from_guid": "7e27c240-d964-11e5-a7b6-0d487dccd14c",
+      "to_guid": "581e35c0-d964-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}

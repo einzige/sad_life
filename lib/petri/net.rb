@@ -27,6 +27,18 @@ module Petri
       end
     end
 
+    # @param place [Place]
+    # @return [Token, nil]
+    def remove_token(place)
+      @tokens.each do |token|
+        if token.place == place
+          @tokens.delete(token)
+          return token
+        end
+      end
+      nil
+    end
+
     protected
 
     def node_by_guid(guid)

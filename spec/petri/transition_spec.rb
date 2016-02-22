@@ -38,4 +38,37 @@ describe Petri::Transition do
       end
     end
   end
+
+  describe '#fire!' do
+    let(:net) { load_net('firing') }
+    subject { net.transitions.first }
+
+    it 'raises if transition is not enabled' do
+      assert_raises ArgumentError do
+        subject.fire!
+      end
+    end
+
+    describe 'enabled transition' do
+      before { net.init }
+
+      it 'consumes tokens' do
+        input_places = net.places.select(&:start?)
+        input_places.all?(&:has_token?).must_equal true
+
+        subject.fire!
+
+        input_places.any?(&:has_token?).must_equal false
+      end
+
+      it 'produces token' do
+        output_places = net.places.select { |place| !place.start? }
+        output_places.any?(&:has_token?).must_equal false
+
+        subject.fire!
+
+        output_places.all?(&:has_token?).must_equal true
+      end
+    end
+  end
 end
