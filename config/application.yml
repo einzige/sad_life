@@ -2,7 +2,7 @@ development: &common
   enable_logging: yes
   autoload_paths:
     - app/models
-    - lib/petri
+    - lib
   default_timezone: 'Pacific Time (US & Canada)'
 
 test:
