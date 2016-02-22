@@ -1,0 +1,102 @@
+{
+  "places": [
+    {
+      "guid": "b85835c0-d983-11e5-a7b6-0d487dccd14c",
+      "x": 127,
+      "y": 205,
+      "start": true
+    },
+    {
+      "guid": "bcb5c380-d983-11e5-a7b6-0d487dccd14c",
+      "title": "testing curved arc weight (below)",
+      "x": 406,
+      "y": 93
+    },
+    {
+      "guid": "bf0bc170-d983-11e5-a7b6-0d487dccd14c",
+      "x": 629,
+      "y": 189
+    },
+    {
+      "guid": "cd358c90-d983-11e5-a7b6-0d487dccd14c",
+      "x": 407,
+      "y": 268
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "bb6575c0-d983-11e5-a7b6-0d487dccd14c",
+      "x": 221,
+      "y": 192
+    },
+    {
+      "guid": "bd9d8b70-d983-11e5-a7b6-0d487dccd14c",
+      "x": 613,
+      "y": 79
+    },
+    {
+      "guid": "c05a8890-d983-11e5-a7b6-0d487dccd14c",
+      "title": "^",
+      "x": 393,
+      "y": 174
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "bb65eaf0-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "b85835c0-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "bb6575c0-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "bcb5ea90-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "bb6575c0-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "bcb5c380-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "bd9dd990-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "bcb5c380-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "bd9d8b70-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "bf0be880-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "bd9d8b70-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "bf0bc170-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "c05aafa0-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "bf0bc170-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "c05a8890-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "c54ba3c0-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "c05a8890-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "bcb5c380-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 29.874753821109664
+    },
+    {
+      "guid": "cd35b3a0-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "bb6575c0-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "cd358c90-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "cf865a60-d983-11e5-a7b6-0d487dccd14c",
+      "from_guid": "cd358c90-d983-11e5-a7b6-0d487dccd14c",
+      "to_guid": "c05a8890-d983-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}

@@ -39,6 +39,21 @@ module Petri
       nil
     end
 
+    # Assigns arc distance weights
+    def index_distances
+      arcs.each(&:reset_distance_weight)
+      start_place.index_output_arc_distance_weights
+    end
+
+    # @return [Place]
+    def start_place
+      start_places = @places.select(&:start?)
+      raise ArgumentError, 'There are more than one start places' if start_places.many?
+      raise ArgumentError, 'There is no start place' if start_places.empty?
+
+      start_places.first
+    end
+
     protected
 
     def node_by_guid(guid)

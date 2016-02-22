@@ -1,0 +1,88 @@
+{
+  "places": [
+    {
+      "guid": "8f2c6960-d97d-11e5-a7b6-0d487dccd14c",
+      "title": "start place",
+      "x": 156,
+      "y": 187,
+      "start": true
+    },
+    {
+      "guid": "8f2c6961-d97d-11e5-a7b6-0d487dccd14c",
+      "x": 618,
+      "y": 188,
+      "finish": true
+    },
+    {
+      "guid": "9440c400-d97d-11e5-a7b6-0d487dccd14c",
+      "x": 399,
+      "y": 187
+    },
+    {
+      "guid": "99706ed0-d97d-11e5-a7b6-0d487dccd14c",
+      "x": 358,
+      "y": 114
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "92c5bcc0-d97d-11e5-a7b6-0d487dccd14c",
+      "x": 259,
+      "y": 172
+    },
+    {
+      "guid": "955f0540-d97d-11e5-a7b6-0d487dccd14c",
+      "x": 473,
+      "y": 172
+    },
+    {
+      "guid": "9a12c950-d97d-11e5-a7b6-0d487dccd14c",
+      "x": 473,
+      "y": 97
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "92c60ae0-d97d-11e5-a7b6-0d487dccd14c",
+      "from_guid": "8f2c6960-d97d-11e5-a7b6-0d487dccd14c",
+      "to_guid": "92c5bcc0-d97d-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "9440c401-d97d-11e5-a7b6-0d487dccd14c",
+      "from_guid": "92c5bcc0-d97d-11e5-a7b6-0d487dccd14c",
+      "to_guid": "9440c400-d97d-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "955f5360-d97d-11e5-a7b6-0d487dccd14c",
+      "from_guid": "9440c400-d97d-11e5-a7b6-0d487dccd14c",
+      "to_guid": "955f0540-d97d-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "9829e510-d97d-11e5-a7b6-0d487dccd14c",
+      "from_guid": "955f0540-d97d-11e5-a7b6-0d487dccd14c",
+      "to_guid": "8f2c6961-d97d-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "99706ed1-d97d-11e5-a7b6-0d487dccd14c",
+      "from_guid": "92c5bcc0-d97d-11e5-a7b6-0d487dccd14c",
+      "to_guid": "99706ed0-d97d-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "9a131770-d97d-11e5-a7b6-0d487dccd14c",
+      "from_guid": "99706ed0-d97d-11e5-a7b6-0d487dccd14c",
+      "to_guid": "9a12c950-d97d-11e5-a7b6-0d487dccd14c",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}
