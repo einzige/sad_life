@@ -10,5 +10,21 @@ module Petri
       @arcs = []
       @tokens = []
     end
+
+    # @param place [Place]
+    # @return [Token]
+    def put_token(place)
+      Token.new(place).tap do |token|
+        @tokens << token
+      end
+    end
+
+    protected
+
+    def node_by_guid(guid)
+      @places.each { |node| return node if node.guid == guid }
+      @transitions.each { |node| return node if node.guid == guid }
+      nil
+    end
   end
 end

@@ -27,4 +27,17 @@ describe Petri::Net do
       arc.type.must_equal :regular
     end
   end
+
+  describe '#put_token' do
+    subject { Petri::Net.new }
+    let(:place) { Petri::Place.new(subject) }
+
+    it 'adds a token' do
+      subject.tokens.count.must_equal 0
+      subject.put_token(place)
+      subject.tokens.count.must_equal 1
+      subject.tokens[0].class.must_equal Petri::Token
+      subject.tokens[0].place.must_equal place
+    end
+  end
 end

@@ -27,12 +27,6 @@ module Petri
       @arcs << Arc.new(self, from: from_node, to: to_node, type: type.try(:to_sym), guid: guid)
     end
 
-    def node_by_guid(guid)
-      @places.each { |node| return node if node.guid == guid }
-      @transitions.each { |node| return node if node.guid == guid }
-      nil
-    end
-
     module ClassMethods
       # @param path [String]
       # @return [Net]
