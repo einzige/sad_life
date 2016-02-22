@@ -11,6 +11,14 @@ module Petri
       @tokens = []
     end
 
+    # Lets the process be started
+    # Populates tokens in start places
+    def init
+      places.each do |place|
+        put_token(place) if place.start?
+      end
+    end
+
     # @param place [Place]
     # @return [Token]
     def put_token(place)

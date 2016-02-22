@@ -28,6 +28,20 @@ describe Petri::Net do
     end
   end
 
+  describe '#init' do
+    subject { load_net('from_place_to_transition') }
+
+    it 'fills start places with tokens' do
+      subject.tokens.count.must_equal 0
+      subject.transitions[0].enabled?.must_equal false
+
+      subject.init
+
+      subject.tokens.count.must_equal 1
+      subject.transitions[0].enabled?.must_equal true
+    end
+  end
+
   describe '#put_token' do
     subject { Petri::Net.new }
     let(:place) { Petri::Place.new(subject) }
