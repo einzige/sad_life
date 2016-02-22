@@ -6,7 +6,7 @@ development: &common
 
 test:
   <<: *common
-  enable_logging: no
+  enable_logging: yes
 
 staging:
   <<: *common
