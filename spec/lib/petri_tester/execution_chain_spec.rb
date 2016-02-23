@@ -25,5 +25,14 @@ describe PetriTester::ExecutionChain do
         subject.chain[3].map(&:title).must_equal ['E']
       end
     end
+
+    describe 'path to the very first transition in the net' do
+      let(:net) { load_net('from_place_to_transition') }
+      let(:transition) { net.transitions.first }
+
+      it 'returns transition itself' do
+        subject.chain.must_equal [[transition]]
+      end
+    end
   end
 end

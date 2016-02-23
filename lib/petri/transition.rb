@@ -10,21 +10,11 @@ module Petri
       input_places.all?(&:has_token?)
     end
 
-    def fire!
+    def fire!(&block)
       raise ArgumentError, 'Transition is not enabled' unless enabled?
       consume_tokens
-      callback.try(:call)
+      block.try(:call)
       produce_tokens
-    end
-
-    # @param block [Proc]
-    def set_callback(&block)
-      @callback = block
-    end
-
-    # @return [Proc, nil]
-    def callback
-      @callback
     end
 
     def input_places

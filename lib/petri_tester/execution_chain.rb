@@ -5,6 +5,7 @@ module PetriTester
   # The most common scenario: running a transition requires it to be enabled.
   # Execution chain lets you find a way to make it enabled and eventually fired.
   class ExecutionChain
+    include Enumerable
 
     # @param node [Petri::Node]
     def initialize(transition)
@@ -16,6 +17,10 @@ module PetriTester
     # @return [Array<Array<Petri::Transition>>]
     def chain
       @chain ||= build_chain
+    end
+
+    def each(&block)
+      chain.each(&block)
     end
 
     private

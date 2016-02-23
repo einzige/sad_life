@@ -69,6 +69,12 @@ describe Petri::Transition do
 
         output_places.all?(&:has_token?).must_equal true
       end
+
+      it 'yields' do
+        x = false
+        subject.fire! { x = true }
+        x.must_equal true
+      end
     end
   end
 end
