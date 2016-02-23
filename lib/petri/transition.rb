@@ -27,6 +27,14 @@ module Petri
       @callback
     end
 
+    def input_places
+      input_nodes
+    end
+
+    def output_places
+      output_nodes
+    end
+
     private
 
     def consume_tokens
@@ -39,14 +47,6 @@ module Petri
       output_places.each do |place|
         net.put_token(place)
       end
-    end
-
-    def input_places
-      input_nodes
-    end
-
-    def output_places
-      output_nodes
     end
   end
 end
