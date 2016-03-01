@@ -60,11 +60,27 @@ describe Petri::Net do
     let(:place) { Petri::Place.new(subject) }
     let(:place_2) { Petri::Place.new(subject) }
 
-    it 'adds a token' do
+    it 'removes a token' do
       subject.put_token(place)
       subject.put_token(place_2)
       subject.tokens.count.must_equal 2
       subject.remove_token(place)
+      subject.tokens.count.must_equal 1
+      subject.tokens.first.place.must_equal place_2
+    end
+  end
+
+  describe '#reset_tokens' do
+    subject { Petri::Net.new }
+    let(:place) { Petri::Place.new(subject) }
+    let(:place_2) { Petri::Place.new(subject) }
+
+    it 'removes all tokens from a place' do
+      subject.put_token(place)
+      subject.put_token(place)
+      subject.put_token(place_2)
+      subject.tokens.count.must_equal 3
+      subject.reset_tokens(place)
       subject.tokens.count.must_equal 1
       subject.tokens.first.place.must_equal place_2
     end

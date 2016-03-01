@@ -26,6 +26,7 @@ GEM
     arel (3.0.3)
     awesome_print (1.6.1)
     builder (3.0.4)
+    byebug (8.2.2)
     database_cleaner (1.5.1)
     erubis (2.7.0)
     framework (0.0.8)
@@ -41,6 +42,8 @@ GEM
     minitest (5.4.3)
     minitest-around (0.3.2)
       minitest (~> 5.0)
+    minitest-focus (1.1.2)
+      minitest (>= 4, < 6)
     minitest-reporters (1.1.8)
       ansi
       builder
@@ -68,10 +71,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   database_cleaner
   framework (= 0.0.8)
   minitest
   minitest-around
+  minitest-focus
   minitest-reporters
   pg
 

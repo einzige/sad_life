@@ -8,7 +8,7 @@ module Petri
 
     # @return [Array<Arc>]
     def input_arcs
-      net.arcs.select { |arc| arc.to_node == self }
+      net.arcs.select { |arc| arc.to_node == self && arc.regular? }
     end
 
     # @return [Array<Node>]
@@ -18,7 +18,7 @@ module Petri
 
     # @return [Array<Arc>]
     def output_arcs
-      net.arcs.select { |arc| arc.from_node == self }
+      net.arcs.select { |arc| arc.from_node == self && arc.regular? }
     end
 
     # @return [Array<Node>]

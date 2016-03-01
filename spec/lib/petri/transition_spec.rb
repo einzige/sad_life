@@ -75,6 +75,22 @@ describe Petri::Transition do
         subject.fire! { x = true }
         x.must_equal true
       end
+
+      describe 'reset arcs' do
+        let(:net) { load_net('reset_arc') }
+
+        it 'removes tokens from places targeted with reset arcs' do
+          net.node_by_identifier('reset on produce').has_token?.must_equal true
+          subject.fire!
+          net.node_by_identifier('reset on produce').has_token?.must_equal false
+        end
+
+        it 'first removes tokens thens produces them' do
+          net.node_by_identifier('reset and fill on produce').has_token?.must_equal true
+          subject.fire!
+          net.node_by_identifier('reset and fill on produce').has_token?.must_equal true
+        end
+      end
     end
   end
 end

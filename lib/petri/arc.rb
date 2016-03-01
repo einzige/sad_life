@@ -6,7 +6,15 @@ module Petri
       super(net, {guid: guid})
       @from_node = from
       @to_node = to
-      @type = type || :regular
+      @type = type.try(:to_sym) || :regular
+    end
+
+    def reset?
+      @type == :reset
+    end
+
+    def regular?
+      @type == :regular
     end
   end
 end

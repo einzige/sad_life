@@ -39,6 +39,18 @@ module Petri
       nil
     end
 
+    # @param place [Place]
+    # @return [Array<Token>]
+    def reset_tokens(place)
+      [].tap do |result|
+        @tokens.each do |token|
+          result << token if token.place == place
+        end
+
+        result.each { |token| @tokens.delete(token) }
+      end
+    end
+
     # @return [Place]
     def start_place
       start_places = @places.select(&:start?)

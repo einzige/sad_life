@@ -7,6 +7,7 @@ require 'framework'
 require 'minitest/reporters'
 require 'minitest/pride'
 require 'minitest/autorun'
+require 'minitest/focus'
 require 'awesome_print'
 require 'database_cleaner'
 
