@@ -57,6 +57,16 @@
       "guid": "6f482c80-d9e4-11e5-92f8-5398c1b90d36",
       "x": 700,
       "y": 253
+    },
+    {
+      "guid": "c618da50-dfcf-11e5-95e7-c91fb6748d51",
+      "x": 261,
+      "y": 343
+    },
+    {
+      "guid": "ce19a680-dfcf-11e5-95e7-c91fb6748d51",
+      "x": 712,
+      "y": 342
     }
   ],
   "transitions": [
@@ -109,6 +119,12 @@
       "identifier": "D2",
       "x": 586,
       "y": 238
+    },
+    {
+      "guid": "8a0ed3c0-dfcf-11e5-95e7-c91fb6748d51",
+      "identifier": "X1",
+      "x": 448,
+      "y": 328
     }
   ],
   "arcs": [
@@ -248,6 +264,34 @@
     {
       "guid": "73167290-d9e4-11e5-92f8-5398c1b90d36",
       "from_guid": "6f482c80-d9e4-11e5-92f8-5398c1b90d36",
+      "to_guid": "30324580-d9e4-11e5-92f8-5398c1b90d36",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "c6190160-dfcf-11e5-95e7-c91fb6748d51",
+      "from_guid": "236b3eb0-d9e4-11e5-92f8-5398c1b90d36",
+      "to_guid": "c618da50-dfcf-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "c6eea0e0-dfcf-11e5-95e7-c91fb6748d51",
+      "from_guid": "c618da50-dfcf-11e5-95e7-c91fb6748d51",
+      "to_guid": "8a0ed3c0-dfcf-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "ce19a681-dfcf-11e5-95e7-c91fb6748d51",
+      "from_guid": "8a0ed3c0-dfcf-11e5-95e7-c91fb6748d51",
+      "to_guid": "ce19a680-dfcf-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "cfe824f0-dfcf-11e5-95e7-c91fb6748d51",
+      "from_guid": "ce19a680-dfcf-11e5-95e7-c91fb6748d51",
       "to_guid": "30324580-d9e4-11e5-92f8-5398c1b90d36",
       "type": "regular",
       "curvature": 0

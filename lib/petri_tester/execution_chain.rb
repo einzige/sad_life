@@ -28,7 +28,14 @@ module PetriTester
     def build_chain
       [].tap do |transitions_in_path|
         find_enabling_transitions(@transition, transitions_in_path)
-      end.reverse
+        transitions_in_path.reverse!
+
+        passed_transitions = []
+        transitions_in_path.each do |subsequence|
+          subsequence.reject! { |transition| passed_transitions.include?(transition) }
+          passed_transitions.concat(subsequence)
+        end
+      end
     end
 
     protected
