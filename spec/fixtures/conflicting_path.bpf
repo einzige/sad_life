@@ -9,8 +9,8 @@
     {
       "guid": "1b7b62c0-dfd4-11e5-95e7-c91fb6748d51",
       "identifier": "<<--- SEARCHING FOR PATH TO \"C\"",
-      "x": 890,
-      "y": 329,
+      "x": 859,
+      "y": 327,
       "finish": true
     },
     {
@@ -49,6 +49,11 @@
       "identifier": "this shit is needed to make sure that \"B\" takes higher priority in chain call ",
       "x": 549,
       "y": 164
+    },
+    {
+      "guid": "42dc5a30-dfda-11e5-95e7-c91fb6748d51",
+      "x": 648,
+      "y": 487
     }
   ],
   "transitions": [
@@ -69,6 +74,18 @@
       "identifier": "B",
       "x": 420,
       "y": 384
+    },
+    {
+      "guid": "1b5afac0-dfda-11e5-95e7-c91fb6748d51",
+      "identifier": "X",
+      "x": 419,
+      "y": 579
+    },
+    {
+      "guid": "39645750-dfda-11e5-95e7-c91fb6748d51",
+      "identifier": "X1",
+      "x": 421,
+      "y": 472
     }
   ],
   "arcs": [
@@ -160,6 +177,48 @@
       "guid": "19f5e951-dfd6-11e5-95e7-c91fb6748d51",
       "from_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
       "to_guid": "19f5e950-dfd6-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": 0
+    },
+    {
+      "guid": "1b5b6ff0-dfda-11e5-95e7-c91fb6748d51",
+      "from_guid": "1b7b3bb0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "1b5afac0-dfda-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "1f2ff790-dfda-11e5-95e7-c91fb6748d51",
+      "from_guid": "1b5afac0-dfda-11e5-95e7-c91fb6748d51",
+      "to_guid": "30466a10-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": -90.89389002849336
+    },
+    {
+      "guid": "3964cc80-dfda-11e5-95e7-c91fb6748d51",
+      "from_guid": "1b7b3bb0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "39645750-dfda-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "42dc8140-dfda-11e5-95e7-c91fb6748d51",
+      "from_guid": "39645750-dfda-11e5-95e7-c91fb6748d51",
+      "to_guid": "42dc5a30-dfda-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "44d2abf0-dfda-11e5-95e7-c91fb6748d51",
+      "from_guid": "42dc5a30-dfda-11e5-95e7-c91fb6748d51",
+      "to_guid": "2601a150-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "53b39210-dfda-11e5-95e7-c91fb6748d51",
+      "from_guid": "39645750-dfda-11e5-95e7-c91fb6748d51",
+      "to_guid": "30466a10-dfd4-11e5-95e7-c91fb6748d51",
       "type": "reset",
       "curvature": 0
     }

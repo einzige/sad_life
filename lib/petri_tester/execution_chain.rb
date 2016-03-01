@@ -10,7 +10,7 @@ module PetriTester
     # @param node [Petri::Node]
     def initialize(transition)
       @transition = transition
-      @call_priorities = Hash.new(0)
+      @call_priorities = {}
     end
 
     # Chain is an array of transitions sorted by execution priority
@@ -38,7 +38,7 @@ module PetriTester
         end
 
         transitions_in_path.each do |subsequence|
-          subsequence.sort_by! { |transition| @call_priorities[transition] }
+          subsequence.sort_by! { |transition| @call_priorities[transition] || Float::INFINITY }
         end
       end
     end
@@ -52,9 +52,14 @@ module PetriTester
       current_path << transition unless current_path.include?(transition)
 
       # Pick a transition on the shortest path which fills input places with tokens
-      transitions = transition.input_places.map do |p|
+      input_places = transition.input_places
+
+      transitions = input_places.map do |p|
         p.reset_transitions.each do |transition|
+          @call_priorities[transition] ||= 0
           @call_priorities[transition] -= 1
+          reset_transitions = (transition.output_places & input_places).flat_map(&:reset_transitions)
+          @call_priorities[transition] += reset_transitions.count
         end
 
         arc = p.input_arcs.min_by { |arc| arc[:distance_weight] || Float::INFINITY }

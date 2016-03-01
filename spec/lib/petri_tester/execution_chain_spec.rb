@@ -32,7 +32,7 @@ describe PetriTester::ExecutionChain do
 
       it 'returns chain with proper order so C firing is possible' do
         subject.chain.count.must_equal 2
-        subject.chain[0].map(&:identifier).must_equal ['B', 'A']
+        subject.chain[0].map(&:identifier).must_equal ['X1', 'B', 'A']
         subject.chain[1].map(&:identifier).must_equal ['C']
       end
     end
