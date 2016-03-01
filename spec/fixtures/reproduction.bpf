@@ -2,138 +2,118 @@
   "places": [
     {
       "guid": "0ba8d480-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "born",
-      "x": -4,
-      "y": 111,
+      "x": 89,
+      "y": 340,
       "start": true
     },
     {
       "guid": "292ed040-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "educated",
-      "x": 229,
-      "y": 111
+      "x": 322,
+      "y": 340
     },
     {
       "guid": "aa3f47a0-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "no job",
-      "x": 591,
-      "y": 269
+      "x": 684,
+      "y": 498
     },
     {
       "guid": "c69f12e0-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "having a job",
-      "x": 749,
-      "y": 179
+      "x": 842,
+      "y": 408
     },
     {
       "guid": "4a511020-d720-11e5-921f-a5d2a35a07d4",
-      "title": "having a girl",
-      "x": 745,
-      "y": 59
+      "x": 838,
+      "y": 288
     },
     {
       "guid": "6ad13910-d720-11e5-921f-a5d2a35a07d4",
-      "title": "no girl",
-      "x": 590,
-      "y": -26
+      "x": 683,
+      "y": 203
     },
     {
       "guid": "e98d91d0-d721-11e5-921f-a5d2a35a07d4",
-      "title": "married",
-      "x": 1035,
-      "y": 61
+      "x": 1128,
+      "y": 290
     },
     {
       "guid": "e591b6a0-d722-11e5-921f-a5d2a35a07d4",
-      "title": "reproduction complete",
-      "x": 1141,
-      "y": 179,
+      "x": 1234,
+      "y": 408,
       "start": false,
       "finish": true
     },
     {
       "guid": "f1e09550-d724-11e5-921f-a5d2a35a07d4",
-      "title": "travelling",
-      "x": 592,
-      "y": 428
+      "x": 685,
+      "y": 657
     }
   ],
   "transitions": [
     {
       "guid": "15a8f320-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "Finish school",
-      "x": 55,
-      "y": 96,
+      "x": 148,
+      "y": 325,
       "action": "finish_school"
     },
     {
       "guid": "47f0a760-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "Graduate university",
-      "x": 309,
-      "y": 96,
+      "x": 402,
+      "y": 325,
       "action": "graduate_university"
     },
     {
       "guid": "b078e860-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "Find a job",
-      "x": 703,
-      "y": 256,
+      "x": 803,
+      "y": 484,
       "action": "find_job"
     },
     {
       "guid": "c920b4b0-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "Get fired",
-      "x": 549,
-      "y": 164,
+      "x": 642,
+      "y": 393,
       "action": "get_fired"
     },
     {
       "guid": "f75f15b0-d71f-11e5-921f-a5d2a35a07d4",
-      "title": "Get married",
-      "x": 849,
-      "y": 44,
+      "x": 942,
+      "y": 273,
       "action": "get_married"
     },
     {
       "guid": "0d2ee2d0-d720-11e5-921f-a5d2a35a07d4",
-      "title": "Find a girl",
-      "x": 694,
-      "y": -41,
+      "x": 796,
+      "y": 188,
       "action": "find_girl"
     },
     {
       "guid": "4ca56060-d720-11e5-921f-a5d2a35a07d4",
-      "title": "Drop your girl",
-      "x": 530,
-      "y": 44,
+      "x": 641,
+      "y": 272,
       "action": "drop_girl"
     },
     {
       "guid": "ebf06100-d721-11e5-921f-a5d2a35a07d4",
-      "title": "Make a baby",
-      "x": 983,
-      "y": 163,
+      "x": 1076,
+      "y": 392,
       "action": "make_baby"
     },
     {
       "guid": "0bbc9150-d724-11e5-921f-a5d2a35a07d4",
-      "title": "Divorce",
-      "x": 999,
-      "y": -91,
+      "x": 1092,
+      "y": 138,
       "action": "divorce"
     },
     {
       "guid": "d07289f0-d724-11e5-921f-a5d2a35a07d4",
-      "title": "Travel",
-      "x": 560,
-      "y": 334,
+      "x": 653,
+      "y": 563,
       "action": "travel"
     },
     {
       "guid": "f489bc50-d724-11e5-921f-a5d2a35a07d4",
-      "title": "Return back home",
-      "x": 705,
-      "y": 414,
+      "x": 798,
+      "y": 643,
       "action": "go_home"
     }
   ],
