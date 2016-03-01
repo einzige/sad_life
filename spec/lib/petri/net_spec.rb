@@ -97,4 +97,20 @@ describe Petri::Net do
       end
     end
   end
+
+  describe '#node_by_identifier' do
+    subject { load_net('from_place_to_transition') }
+
+    it 'finds matched place' do
+      subject.node_by_identifier('place').class.must_equal Petri::Place
+    end
+
+    it 'finds matched transition' do
+      subject.node_by_identifier('Transition').class.must_equal Petri::Transition
+    end
+
+    specify do
+      subject.node_by_identifier('blah').must_equal nil
+    end
+  end
 end

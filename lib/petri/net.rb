@@ -48,6 +48,15 @@ module Petri
       start_places.first
     end
 
+    # @param identifier [String]
+    # @return [Node, nil]
+    def node_by_identifier(identifier)
+      identifier = identifier.to_s
+      @places.each { |node| return node if node.identifier == identifier }
+      @transitions.each { |node| return node if node.identifier == identifier }
+      nil
+    end
+
     protected
 
     def node_by_guid(guid)
