@@ -19,10 +19,14 @@ module PetriTester
     # @param transition_identifier [String]
     def execute(transition_identifier)
       init
-      transition = transition_by_identifier!(transition_identifier)
+      target_transition = transition_by_identifier!(transition_identifier)
 
-      PetriTester::ExecutionChain.new(transition).each do |level|
+      PetriTester::ExecutionChain.new(target_transition).each do |level|
         level.each do |transition|
+          unless transition.enabled?
+            raise ArgumentError, "Transition '#{transition.identifier}' is unreachable"
+          end
+
           callback = @callbacks[transition]
           callback ? transition.fire!(&callback) : transition.fire!
         end
