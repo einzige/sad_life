@@ -52,66 +52,77 @@
   "transitions": [
     {
       "guid": "15a8f320-d71f-11e5-921f-a5d2a35a07d4",
+      "identifier": "Finish school",
       "x": 148,
       "y": 325,
       "action": "finish_school"
     },
     {
       "guid": "47f0a760-d71f-11e5-921f-a5d2a35a07d4",
+      "identifier": "Graduate university",
       "x": 402,
       "y": 325,
       "action": "graduate_university"
     },
     {
       "guid": "b078e860-d71f-11e5-921f-a5d2a35a07d4",
+      "identifier": "Find job",
       "x": 803,
       "y": 484,
       "action": "find_job"
     },
     {
       "guid": "c920b4b0-d71f-11e5-921f-a5d2a35a07d4",
+      "identifier": "Get fired",
       "x": 642,
       "y": 393,
       "action": "get_fired"
     },
     {
       "guid": "f75f15b0-d71f-11e5-921f-a5d2a35a07d4",
+      "identifier": "Get married",
       "x": 942,
-      "y": 273,
+      "y": 274,
       "action": "get_married"
     },
     {
       "guid": "0d2ee2d0-d720-11e5-921f-a5d2a35a07d4",
+      "identifier": "Find girl",
       "x": 796,
       "y": 188,
       "action": "find_girl"
     },
     {
       "guid": "4ca56060-d720-11e5-921f-a5d2a35a07d4",
+      "identifier": "Drop girl",
       "x": 641,
       "y": 272,
       "action": "drop_girl"
     },
     {
       "guid": "ebf06100-d721-11e5-921f-a5d2a35a07d4",
+      "identifier": "Make baby",
       "x": 1076,
       "y": 392,
       "action": "make_baby"
     },
     {
       "guid": "0bbc9150-d724-11e5-921f-a5d2a35a07d4",
+      "identifier": "Divorce",
       "x": 1092,
       "y": 138,
       "action": "divorce"
     },
     {
       "guid": "d07289f0-d724-11e5-921f-a5d2a35a07d4",
+      "identifier": "Travel",
       "x": 653,
       "y": 563,
       "action": "travel"
     },
     {
       "guid": "f489bc50-d724-11e5-921f-a5d2a35a07d4",
+      "identifier": "Go home",
       "x": 798,
       "y": 643,
       "action": "go_home"
