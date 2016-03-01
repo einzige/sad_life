@@ -2,30 +2,30 @@
   "places": [
     {
       "guid": "cc0e3650-d951-11e5-a7b6-0d487dccd14c",
-      "title": "place",
-      "x": 241,
-      "y": 265,
+      "identifier": "place",
+      "x": 240,
+      "y": 266,
       "start": true
     }
   ],
   "transitions": [
     {
       "guid": "d01e1940-d951-11e5-a7b6-0d487dccd14c",
-      "title": "A",
+      "identifier": "A",
       "x": 405,
       "y": 169,
       "action": "a\n"
     },
     {
       "guid": "d1488f80-d951-11e5-a7b6-0d487dccd14c",
-      "title": "B",
+      "identifier": "B",
       "x": 406,
       "y": 250,
       "action": "b"
     },
     {
       "guid": "d338c6c0-d951-11e5-a7b6-0d487dccd14c",
-      "title": "C",
+      "identifier": "C",
       "x": 405,
       "y": 329,
       "action": "c"

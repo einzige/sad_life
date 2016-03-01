@@ -2,7 +2,7 @@
   "places": [
     {
       "guid": "26298480-d959-11e5-a7b6-0d487dccd14c",
-      "title": "place",
+      "identifier": "place",
       "x": 320,
       "y": 240,
       "start": false,
@@ -12,8 +12,8 @@
   "transitions": [
     {
       "guid": "25a5d590-d959-11e5-a7b6-0d487dccd14c",
-      "title": "Transition",
-      "x": 144,
+      "identifier": "Transition",
+      "x": 139,
       "y": 225,
       "action": "t"
     }

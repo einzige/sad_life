@@ -2,8 +2,8 @@ module Petri
   class Node < Element
 
     # @return [String, nil]
-    def title
-      @data[:title]
+    def identifier
+      @data[:identifier]
     end
 
     # @return [Array<Arc>]

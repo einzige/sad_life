@@ -3,21 +3,21 @@ module Petri
     extend ActiveSupport::Concern
 
     # @param guid [String]
-    # @param title [String]
+    # @param identifier [String]
     # @param start [true, false]
-    def add_place(guid: , title: , start: )
-      @places << Place.new(self, {guid: guid, title: title, start: start})
+    def add_place(guid: , identifier: , start: )
+      @places << Place.new(self, {guid: guid, identifier: identifier, start: start})
     end
 
     # @param guid [String]
-    # @param title [String]
+    # @param identifier [String]
     # @param action [String]
-    def add_transition(guid: , title: , action: )
-      @transitions << Transition.new(self, {guid: guid, title: title, action: action})
+    def add_transition(guid: , identifier: , action: )
+      @transitions << Transition.new(self, {guid: guid, identifier: identifier, action: action})
     end
 
     # @param guid [String]
-    # @param title [String]
+    # @param identifier [String]
     # @param from_guid [String]
     # @param to_guid [String]
     # @param type [String]
@@ -52,13 +52,13 @@ module Petri
         self.new.tap do |net|
           hash['places'].each do |data|
             net.add_place(guid: data['guid'],
-                          title: data['title'],
+                          identifier: data['identifier'],
                           start: data['start'])
           end
 
           hash['transitions'].each do |data|
             net.add_transition(guid: data['guid'],
-                               title: data['title'],
+                               identifier: data['identifier'],
                                action: data['action'])
           end
 

@@ -9,17 +9,17 @@ module PetriTester
     end
 
     # Binds callback on a net transition
-    # @param transition_title [String]
+    # @param transition_identifier [String]
     # @param block [Proc]
-    def on(transition_title, &block)
+    def on(transition_identifier, &block)
       raise ArgumentError, 'No block given' unless block
-      @callbacks[transition_by_title!(transition_title)] = block
+      @callbacks[transition_by_identifier!(transition_identifier)] = block
     end
 
-    # @param transition_title [String]
-    def execute(transition_title)
+    # @param transition_identifier [String]
+    def execute(transition_identifier)
       init
-      transition = transition_by_title!(transition_title)
+      transition = transition_by_identifier!(transition_identifier)
 
       PetriTester::ExecutionChain.new(transition).each do |level|
         level.each do |transition|
@@ -29,17 +29,17 @@ module PetriTester
       end
     end
 
-    # @param title [String]
+    # @param identifier [String]
     # @return [Transition, nil]
-    def transition_by_title(title)
-      @net.transitions.find { |t| t.title == title }
+    def transition_by_identifier(identifier)
+      @net.transitions.find { |t| t.identifier == identifier }
     end
 
-    # @param title [String]
+    # @param identifier [String]
     # @raise [ArgumentError] if transition is not found
     # @return [Transition]
-    def transition_by_title!(title)
-      transition_by_title(title) or raise ArgumentError, "No such transition '#{title}'"
+    def transition_by_identifier!(identifier)
+      transition_by_identifier(identifier) or raise ArgumentError, "No such transition '#{identifier}'"
     end
 
     private

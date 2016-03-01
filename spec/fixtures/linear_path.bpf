@@ -8,7 +8,7 @@
     },
     {
       "guid": "1e2c12e0-d989-11e5-a7b6-0d487dccd14c",
-      "x": 800,
+      "x": 803,
       "y": 126,
       "finish": true
     },
@@ -24,7 +24,7 @@
     },
     {
       "guid": "336f0950-d989-11e5-a7b6-0d487dccd14c",
-      "title": "<-- searhing for the path to C",
+      "identifier": "<-- searhing for the path to C",
       "x": 635,
       "y": 100
     }
@@ -32,26 +32,26 @@
   "transitions": [
     {
       "guid": "21520b00-d989-11e5-a7b6-0d487dccd14c",
-      "title": "A",
+      "identifier": "A",
       "x": 124,
       "y": 84
     },
     {
       "guid": "23c6b480-d989-11e5-a7b6-0d487dccd14c",
-      "title": "B",
+      "identifier": "B",
       "x": 324,
       "y": 85
     },
     {
       "guid": "2e50eab0-d989-11e5-a7b6-0d487dccd14c",
-      "title": "C",
+      "identifier": "C",
       "x": 520,
       "y": 85,
       "action": "c"
     },
     {
       "guid": "351e18e0-d989-11e5-a7b6-0d487dccd14c",
-      "title": "D",
+      "identifier": "D",
       "x": 698,
       "y": 111
     }

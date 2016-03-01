@@ -2,14 +2,14 @@
   "places": [
     {
       "guid": "51d26c90-d964-11e5-a7b6-0d487dccd14c",
-      "title": "in1",
+      "identifier": "in1",
       "x": 163,
       "y": 275,
       "start": true
     },
     {
       "guid": "51d26c91-d964-11e5-a7b6-0d487dccd14c",
-      "title": "out1",
+      "identifier": "out1",
       "x": 405,
       "y": 251,
       "start": false,
@@ -17,19 +17,19 @@
     },
     {
       "guid": "59945b00-d964-11e5-a7b6-0d487dccd14c",
-      "title": "out2",
+      "identifier": "out2",
       "x": 404,
       "y": 316
     },
     {
       "guid": "5ad73b40-d964-11e5-a7b6-0d487dccd14c",
-      "title": "out3",
+      "identifier": "out3",
       "x": 404,
       "y": 384
     },
     {
       "guid": "7e27c240-d964-11e5-a7b6-0d487dccd14c",
-      "title": "in2",
+      "identifier": "in2",
       "x": 163,
       "y": 371,
       "start": true,
@@ -39,7 +39,7 @@
   "transitions": [
     {
       "guid": "581e35c0-d964-11e5-a7b6-0d487dccd14c",
-      "title": "t",
+      "identifier": "t",
       "x": 271,
       "y": 299
     }

@@ -1,6 +1,6 @@
 describe PetriTester::ExecutionChain do
   let(:net) { load_net('linear_path') }
-  let(:transition) { net.transitions.find { |t| t[:title] == 'C' } }
+  let(:transition) { net.transitions.find { |t| t[:identifier] == 'C' } }
 
   describe '#chain' do
     before { PetriTester::DistanceWeightIndexator.new(net).reindex }
@@ -8,21 +8,21 @@ describe PetriTester::ExecutionChain do
 
     it 'returns chain of transitions grouped by call priority' do
       subject.chain.count.must_equal 3
-      subject.chain[0].map(&:title).must_equal ['A']
-      subject.chain[1].map(&:title).must_equal ['B']
-      subject.chain[2].map(&:title).must_equal ['C']
+      subject.chain[0].map(&:identifier).must_equal ['A']
+      subject.chain[1].map(&:identifier).must_equal ['B']
+      subject.chain[2].map(&:identifier).must_equal ['C']
     end
 
     describe 'non linear path' do
       let(:net) { load_net('non_linear_path') }
-      let(:transition) { net.transitions.find { |t| t[:title] == 'E' } }
+      let(:transition) { net.transitions.find { |t| t[:identifier] == 'E' } }
 
       it 'returns chain of transitions grouped by call priority' do
         subject.chain.count.must_equal 4
-        subject.chain[0].map(&:title).must_equal ['A']
-        subject.chain[1].map(&:title).must_equal ['B', 'C1', 'D1']
-        subject.chain[2].map(&:title).must_equal ['C2', 'D2']
-        subject.chain[3].map(&:title).must_equal ['E']
+        subject.chain[0].map(&:identifier).must_equal ['A']
+        subject.chain[1].map(&:identifier).must_equal ['B', 'C1', 'D1']
+        subject.chain[2].map(&:identifier).must_equal ['C2', 'D2']
+        subject.chain[3].map(&:identifier).must_equal ['E']
       end
     end
 

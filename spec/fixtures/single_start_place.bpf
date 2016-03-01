@@ -2,7 +2,7 @@
   "places": [
     {
       "guid": "8f2c6960-d97d-11e5-a7b6-0d487dccd14c",
-      "title": "start place",
+      "identifier": "start place",
       "x": 156,
       "y": 187,
       "start": true

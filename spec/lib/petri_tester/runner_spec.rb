@@ -14,7 +14,7 @@ describe PetriTester::Runner do
     end
 
     it 'enables ouput transitions' do
-      next_transition = subject.transition_by_title!('Graduate university')
+      next_transition = subject.transition_by_identifier!('Graduate university')
       next_transition.enabled?.must_equal false
 
       subject.execute('Finish school')

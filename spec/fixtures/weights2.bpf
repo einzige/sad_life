@@ -8,7 +8,7 @@
     },
     {
       "guid": "bcb5c380-d983-11e5-a7b6-0d487dccd14c",
-      "title": "testing curved arc weight (below)",
+      "identifier": "testing curved arc weight (below)",
       "x": 406,
       "y": 93
     },
@@ -36,7 +36,7 @@
     },
     {
       "guid": "c05a8890-d983-11e5-a7b6-0d487dccd14c",
-      "title": "^",
+      "identifier": "^",
       "x": 393,
       "y": 174
     }

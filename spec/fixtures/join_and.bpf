@@ -2,19 +2,19 @@
   "places": [
     {
       "guid": "6c260ec0-d951-11e5-a7b6-0d487dccd14c",
-      "title": "1",
+      "identifier": "1",
       "x": 240,
       "y": 239
     },
     {
       "guid": "6fd422a0-d951-11e5-a7b6-0d487dccd14c",
-      "title": "2",
+      "identifier": "2",
       "x": 240,
       "y": 318
     },
     {
       "guid": "71021b50-d951-11e5-a7b6-0d487dccd14c",
-      "title": "3",
+      "identifier": "3",
       "x": 241,
       "y": 399
     }
@@ -22,9 +22,9 @@
   "transitions": [
     {
       "guid": "6d255650-d951-11e5-a7b6-0d487dccd14c",
-      "title": "Action",
-      "x": 391,
-      "y": 306,
+      "identifier": "Action",
+      "x": 394,
+      "y": 305,
       "action": "action"
     }
   ],

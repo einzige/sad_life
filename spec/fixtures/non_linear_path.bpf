@@ -8,7 +8,7 @@
     },
     {
       "guid": "185b84d0-d9e4-11e5-92f8-5398c1b90d36",
-      "x": 1030,
+      "x": 1036,
       "y": 183,
       "finish": true
     },
@@ -29,7 +29,7 @@
     },
     {
       "guid": "32fd4c60-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "<-- searching for the path to E",
+      "identifier": "<-- searching for the path to E",
       "x": 857,
       "y": 160
     },
@@ -62,50 +62,51 @@
   "transitions": [
     {
       "guid": "236b3eb0-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "A",
+      "identifier": "A",
       "x": 134,
       "y": 83,
       "action": ""
     },
     {
       "guid": "28d903f0-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "B",
+      "identifier": "B",
       "x": 369,
-      "y": -18
+      "y": -19
     },
     {
       "guid": "2d473380-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "C2",
+      "identifier": "C2",
       "x": 585,
       "y": 83
     },
     {
       "guid": "30324580-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "E",
+      "identifier": "E",
       "x": 766,
       "y": 145,
       "action": "e"
     },
     {
       "guid": "34272660-d9e4-11e5-92f8-5398c1b90d36",
+      "identifier": "F",
       "x": 929,
       "y": 168
     },
     {
       "guid": "479f20d0-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "C1",
-      "x": 370,
+      "identifier": "C1",
+      "x": 369,
       "y": 83
     },
     {
       "guid": "689934b0-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "D1",
-      "x": 370,
-      "y": 236
+      "identifier": "D1",
+      "x": 371,
+      "y": 235
     },
     {
       "guid": "6c0361c0-d9e4-11e5-92f8-5398c1b90d36",
-      "title": "D2",
+      "identifier": "D2",
       "x": 586,
       "y": 238
     }

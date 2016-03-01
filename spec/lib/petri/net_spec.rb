@@ -9,13 +9,13 @@ describe Petri::Net do
     it 'loads places' do
       subject.places.count.must_equal 1
       place = subject.places[0]
-      place.title.must_equal 'place'
+      place.identifier.must_equal 'place'
     end
 
     it 'loads transitions' do
       subject.transitions.count.must_equal 1
       transition = subject.transitions[0]
-      transition.title.must_equal 'Transition'
+      transition.identifier.must_equal 'Transition'
       transition.action.must_equal 't'
     end
 
@@ -74,7 +74,7 @@ describe Petri::Net do
     subject { load_net('single_start_place') }
 
     it 'returns start_place' do
-      subject.start_place.title.must_equal 'start place'
+      subject.start_place.identifier.must_equal 'start place'
     end
 
     describe 'multiple start places' do
