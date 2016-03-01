@@ -21,7 +21,7 @@ describe PetriTester::ExecutionChain do
         subject.chain.count.must_equal 4
         subject.chain[0].map(&:identifier).must_equal ['A']
         subject.chain[1].map(&:identifier).must_equal ['B', 'C1', 'D1']
-        subject.chain[2].map(&:identifier).must_equal ['C2', 'D2', 'X1']
+        subject.chain[2].map(&:identifier).must_equal ['C2', 'D2', 'X1', 'X3']
         subject.chain[3].map(&:identifier).must_equal ['E']
       end
     end
