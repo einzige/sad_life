@@ -1,0 +1,167 @@
+{
+  "places": [
+    {
+      "guid": "1b7b3bb0-dfd4-11e5-95e7-c91fb6748d51",
+      "x": 240,
+      "y": 327,
+      "start": true
+    },
+    {
+      "guid": "1b7b62c0-dfd4-11e5-95e7-c91fb6748d51",
+      "identifier": "<<--- SEARCHING FOR PATH TO \"C\"",
+      "x": 890,
+      "y": 329,
+      "finish": true
+    },
+    {
+      "guid": "243804e0-dfd4-11e5-95e7-c91fb6748d51",
+      "identifier": "this one doesn't let \"C\" to be enabled if you fired \"B\" after \"A\"",
+      "x": 605,
+      "y": 266
+    },
+    {
+      "guid": "30466a10-dfd4-11e5-95e7-c91fb6748d51",
+      "x": 597,
+      "y": 399
+    },
+    {
+      "guid": "1559f300-dfd6-11e5-95e7-c91fb6748d51",
+      "x": 507,
+      "y": 123
+    },
+    {
+      "guid": "16e267c0-dfd6-11e5-95e7-c91fb6748d51",
+      "x": 436,
+      "y": 117
+    },
+    {
+      "guid": "18240f80-dfd6-11e5-95e7-c91fb6748d51",
+      "x": 375,
+      "y": 123
+    },
+    {
+      "guid": "1911f1f0-dfd6-11e5-95e7-c91fb6748d51",
+      "x": 315,
+      "y": 162
+    },
+    {
+      "guid": "19f5e950-dfd6-11e5-95e7-c91fb6748d51",
+      "identifier": "this shit is needed to make sure that \"B\" takes higher priority in chain call ",
+      "x": 549,
+      "y": 164
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "identifier": "A",
+      "x": 421,
+      "y": 251
+    },
+    {
+      "guid": "2601a150-dfd4-11e5-95e7-c91fb6748d51",
+      "identifier": "C",
+      "x": 720,
+      "y": 312
+    },
+    {
+      "guid": "2a4b31e0-dfd4-11e5-95e7-c91fb6748d51",
+      "identifier": "B",
+      "x": 420,
+      "y": 384
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "2312e5d0-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "1b7b3bb0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "24382bf0-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "243804e0-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": "0"
+    },
+    {
+      "guid": "26021680-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "243804e0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "2601a150-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "2a4ba710-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "1b7b3bb0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "2a4b31e0-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "2c2dfba0-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "2a4b31e0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "243804e0-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": 0
+    },
+    {
+      "guid": "30469120-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "2a4b31e0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "30466a10-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "31c2a9d0-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "30466a10-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "2601a150-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "367bc510-dfd4-11e5-95e7-c91fb6748d51",
+      "from_guid": "2601a150-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "1b7b62c0-dfd4-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "155a1a10-dfd6-11e5-95e7-c91fb6748d51",
+      "from_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "1559f300-dfd6-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": 0
+    },
+    {
+      "guid": "16e28ed0-dfd6-11e5-95e7-c91fb6748d51",
+      "from_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "16e267c0-dfd6-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": 0
+    },
+    {
+      "guid": "18243690-dfd6-11e5-95e7-c91fb6748d51",
+      "from_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "18240f80-dfd6-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": 0
+    },
+    {
+      "guid": "1911f1f1-dfd6-11e5-95e7-c91fb6748d51",
+      "from_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "1911f1f0-dfd6-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": 0
+    },
+    {
+      "guid": "19f5e951-dfd6-11e5-95e7-c91fb6748d51",
+      "from_guid": "231270a0-dfd4-11e5-95e7-c91fb6748d51",
+      "to_guid": "19f5e950-dfd6-11e5-95e7-c91fb6748d51",
+      "type": "reset",
+      "curvature": 0
+    }
+  ]
+}

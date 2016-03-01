@@ -2,6 +2,7 @@
   "places": [
     {
       "guid": "2ab9c8a0-dfc8-11e5-9a5c-1d1580b9b500",
+      "identifier": "start",
       "x": 242,
       "y": 281,
       "start": true
@@ -21,6 +22,14 @@
       "y": 188,
       "start": true,
       "finish": false
+    },
+    {
+      "guid": "defc8810-dfd8-11e5-95e7-c91fb6748d51",
+      "identifier": "finish",
+      "x": 666,
+      "y": 291,
+      "start": false,
+      "finish": true
     }
   ],
   "transitions": [
@@ -83,6 +92,20 @@
       "guid": "7affb5e0-dfc8-11e5-95e7-c91fb6748d51",
       "from_guid": "31977190-dfc8-11e5-9a5c-1d1580b9b500",
       "to_guid": "7aff40b0-dfc8-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "defc8811-dfd8-11e5-95e7-c91fb6748d51",
+      "from_guid": "5a097290-dfc8-11e5-95e7-c91fb6748d51",
+      "to_guid": "defc8810-dfd8-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "e9d839a0-dfd8-11e5-95e7-c91fb6748d51",
+      "from_guid": "7aff40b0-dfc8-11e5-95e7-c91fb6748d51",
+      "to_guid": "defc8810-dfd8-11e5-95e7-c91fb6748d51",
       "type": "regular",
       "curvature": 0
     }

@@ -10,6 +10,7 @@ module PetriTester
     # @param node [Petri::Node]
     def initialize(transition)
       @transition = transition
+      @call_priorities = Hash.new(0)
     end
 
     # Chain is an array of transitions sorted by execution priority
@@ -35,12 +36,15 @@ module PetriTester
           subsequence.reject! { |transition| passed_transitions.include?(transition) }
           passed_transitions.concat(subsequence)
         end
+
+        transitions_in_path.each do |subsequence|
+          subsequence.sort_by! { |transition| @call_priorities[transition] }
+        end
       end
     end
 
     protected
 
-    # @note it doesn't handle reset arcs
     def find_enabling_transitions(transition, transitions_in_path, index: 0)
       return if transitions_in_path.include?(transition) # handle circular paths
 
@@ -49,8 +53,15 @@ module PetriTester
 
       # Pick a transition on the shortest path which fills input places with tokens
       transitions = transition.input_places.map do |p|
+        p.reset_transitions.each do |transition|
+          @call_priorities[transition] -= 1
+        end
+
         arc = p.input_arcs.min_by { |arc| arc[:distance_weight] || Float::INFINITY }
-        arc.from_node if arc && arc[:distance_weight] # handle blind nodes
+
+        if arc && arc[:distance_weight] # handle blind nodes
+          arc.from_node
+        end
       end.compact
 
       transitions.each do |transition|

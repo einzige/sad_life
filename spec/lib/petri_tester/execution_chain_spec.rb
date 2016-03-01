@@ -26,6 +26,17 @@ describe PetriTester::ExecutionChain do
       end
     end
 
+    describe 'conflicting path (with reset arcs which kill the process)' do
+      let(:net) { load_net('conflicting_path') }
+      let(:transition) { net.node_by_identifier('C') }
+
+      it 'returns chain with proper order so C firing is possible' do
+        subject.chain.count.must_equal 2
+        subject.chain[0].map(&:identifier).must_equal ['B', 'A']
+        subject.chain[1].map(&:identifier).must_equal ['C']
+      end
+    end
+
     describe 'path to the very first transition in the net' do
       let(:net) { load_net('from_place_to_transition') }
       let(:transition) { net.transitions.first }
