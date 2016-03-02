@@ -4,6 +4,7 @@ module PetriTester
   # start node of a net to the arc itself.
   # These weights are used to optimize shortest paths search.
   class DistanceWeightIndexator
+    attr_reader :net
 
     # @param net [Petri::Net]
     def initialize(net)
@@ -11,8 +12,9 @@ module PetriTester
     end
 
     def reindex
+      return if net[:distance_weights_set]
       reset_weights
-      index_from_node(@net.start_place)
+      index_from_node(net.start_place).tap { net[:distance_weights_set] = true }
     end
 
     private
@@ -31,7 +33,7 @@ module PetriTester
     end
 
     def reset_weights
-      @net.arcs.each do |arc|
+      net.arcs.each do |arc|
         arc[:distance_weight] = nil
       end
     end

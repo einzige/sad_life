@@ -1,10 +1,25 @@
 module Petri
   class Token
-    attr_reader :place
+    attr_reader :place, :source_transition, :data
 
     # @param place [Place]
-    def initialize(place)
+    # @param source_transition [Transition, nil]
+    def initialize(place, source_transition = nil)
       @place = place
+      @source_transition = source_transition
+      @data = {}
+    end
+
+    # @return [String, nil]
+    def production_rule
+      source_arc && source_arc.data[:production_rule]
+    end
+
+    # @return [Arc, nil]
+    def source_arc
+      if source_transition
+        place.input_arcs.find { |arc| arc.from_node == source_transition }
+      end
     end
   end
 end

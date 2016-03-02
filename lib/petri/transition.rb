@@ -26,16 +26,16 @@ module Petri
       output_nodes
     end
 
+    # @return [Array<Place>]
+    def places_to_reset
+      reset_arcs.map(&:to_node)
+    end
+
     private
 
     # @return [Array<Arc>]
     def reset_arcs
       net.arcs.select { |arc| arc.from_node == self && arc.reset? }
-    end
-
-    # @return [Array<Place>]
-    def places_to_reset
-      reset_arcs.map(&:to_node)
     end
 
     # Executes reset arc logic on fire

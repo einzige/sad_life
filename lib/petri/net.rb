@@ -9,6 +9,7 @@ module Petri
       @places = []
       @arcs = []
       @tokens = []
+      @data = {}
     end
 
     # Lets the process be started
@@ -67,6 +68,14 @@ module Petri
       @places.each { |node| return node if node.identifier == identifier }
       @transitions.each { |node| return node if node.identifier == identifier }
       nil
+    end
+
+    def [](key)
+      @data[key]
+    end
+
+    def []=(k, v)
+      @data[k] = v
     end
 
     protected

@@ -11,17 +11,17 @@ describe PetriTester::Runner do
       end
 
       it 'performs binded action' do
-        subject.execute('Finish school')
+        subject.execute!('Finish school')
         human.finished_school?.must_equal true
       end
 
       it 'enables ouput transitions' do
-        next_transition = subject.transition_by_identifier!('Graduate university')
-        next_transition.enabled?.must_equal false
+        next_transition = net.node_by_identifier('Graduate university')
+        subject.transition_enabled?(next_transition).must_equal false
 
-        subject.execute('Finish school')
+        subject.execute!('Finish school')
 
-        next_transition.enabled?.must_equal true
+        subject.transition_enabled?(next_transition).must_equal true
       end
     end
 
@@ -29,8 +29,29 @@ describe PetriTester::Runner do
       let(:net) { load_net('unreachable_transition') }
 
       it 'raises error' do
-        error = assert_raises(ArgumentError) { subject.execute('Unreachable') }
-        error.message.must_match /'Unreachable' is unreachable/i
+        error = assert_raises(ArgumentError) { subject.execute!('Unreachable') }
+        error.message.must_match /'Unreachable' is not enabled/i
+      end
+    end
+
+    describe 'tokens data passing' do
+      let(:net) { load_net('tokens_data_passing') }
+
+      before do
+        subject.produce('Number') do |token|
+          token.data['number'] = token.production_rule.to_i
+        end
+
+        subject.produce('Sum') do |token, action|
+          token.data['sum'] = action.consumed_tokens.sum { |t| t.data['number'].to_i }
+        end
+      end
+
+      let(:result_data) { subject.tokens.first.data }
+
+      it 'produces tokens with filled in data' do
+        subject.execute!('Sum')
+        result_data['sum'].must_equal 3
       end
     end
   end
