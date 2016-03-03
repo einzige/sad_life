@@ -70,6 +70,11 @@ module PetriTester
       nil
     end
 
+    # @param token [Token]
+    def restore_token(token)
+      @tokens << token
+    end
+
     # @param place [Place]
     # @return [Array<Token>]
     def reset_tokens(place)

@@ -15,7 +15,7 @@ describe PetriTester::Runner do
         human.finished_school?.must_equal true
       end
 
-      it 'enables ouput transitions' do
+      it 'enables output transitions' do
         next_transition = net.node_by_identifier('Graduate university')
         subject.transition_enabled?(next_transition).must_equal false
 
@@ -43,7 +43,33 @@ describe PetriTester::Runner do
         end
 
         subject.produce('Sum') do |token, action|
-          token.data['sum'] = action.consumed_tokens.sum { |t| t.data['number'].to_i }
+          token.data['number'] = action.consumed_tokens.sum { |t| t.data['number'].to_i }
+        end
+
+        subject.on('<') do |action|
+          if action.output_places.many?
+            raise ArgumentError, "Action '<' must have only single output"
+          end
+
+          output_arc = action.output_places.first.input_arcs.first
+          number = output_arc.production_rule.to_i
+
+          action.consumed_tokens.all? do |token|
+            token.data['number'] < number
+          end
+        end
+
+        subject.on('>=') do |action|
+          if action.output_places.many?
+            raise ArgumentError, "Action '>=' must have only single output"
+          end
+
+          output_arc = action.output_places.first.input_arcs.first
+          number = output_arc.production_rule.to_i
+
+          action.consumed_tokens.all? do |token|
+            token.data['number'] >= number
+          end
         end
       end
 
@@ -51,7 +77,19 @@ describe PetriTester::Runner do
 
       it 'produces tokens with filled in data' do
         subject.execute!('Sum')
-        result_data['sum'].must_equal 3
+        result_data['number'].must_equal 3
+      end
+
+      it 'works with conditionals returning false' do
+        subject.execute!('<')
+        subject.tokens.count.must_equal 1
+        subject.tokens.first.place.identifier.must_equal 'sum'
+      end
+
+      it 'works with conditionals returning true' do
+        subject.execute!('>=')
+        subject.tokens.count.must_equal 1
+        subject.tokens.first.place.identifier.must_equal 'finish'
       end
     end
   end

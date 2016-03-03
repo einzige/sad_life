@@ -2,16 +2,18 @@
   "places": [
     {
       "guid": "507f8f30-dfe5-11e5-95e7-c91fb6748d51",
+      "identifier": "",
       "x": 413,
       "y": 259,
       "start": true
     },
     {
       "guid": "507fb640-dfe5-11e5-95e7-c91fb6748d51",
-      "identifier": "finish",
+      "identifier": "sum",
       "x": 1008,
       "y": 261,
-      "finish": true
+      "start": false,
+      "finish": false
     },
     {
       "guid": "8301b460-dfe5-11e5-95e7-c91fb6748d51",
@@ -24,6 +26,20 @@
       "identifier": "one",
       "x": 725,
       "y": 160
+    },
+    {
+      "guid": "5bf31870-e0ec-11e5-93a9-2966c9b4b53a",
+      "identifier": "less than 3",
+      "x": 1273,
+      "y": 259
+    },
+    {
+      "guid": "8b128aa0-e0ec-11e5-93a9-2966c9b4b53a",
+      "identifier": "finish",
+      "x": 1280,
+      "y": 327,
+      "start": false,
+      "finish": true
     }
   ],
   "transitions": [
@@ -32,13 +48,34 @@
       "identifier": "Number",
       "x": 518,
       "y": 244,
+      "action": "",
       "automated": false
     },
     {
       "guid": "85107020-dfe5-11e5-95e7-c91fb6748d51",
       "identifier": "Sum",
       "x": 843,
-      "y": 246
+      "y": 246,
+      "action": ""
+    },
+    {
+      "guid": "50dea3a0-e0ec-11e5-93a9-2966c9b4b53a",
+      "identifier": "<",
+      "x": 1142,
+      "y": 245
+    },
+    {
+      "guid": "6122c340-e0ec-11e5-93a9-2966c9b4b53a",
+      "identifier": "Raise error",
+      "x": 1344,
+      "y": 241
+    },
+    {
+      "guid": "7618d230-e0ec-11e5-93a9-2966c9b4b53a",
+      "identifier": ">=",
+      "x": 1142,
+      "y": 312,
+      "automated": false
     }
   ],
   "arcs": [
@@ -47,14 +84,16 @@
       "from_guid": "507f8f30-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "6fc403d0-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
-      "curvature": 0
+      "curvature": "0",
+      "guard": "",
+      "timer_rule": ""
     },
     {
       "guid": "8301b461-dfe5-11e5-95e7-c91fb6748d51",
       "from_guid": "6fc403d0-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "8301b460-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
-      "curvature": 0.4115360487073745,
+      "curvature": "0.4115360487073745",
       "production_rule": "2"
     },
     {
@@ -62,21 +101,25 @@
       "from_guid": "8301b460-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "85107020-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
-      "curvature": 0
+      "curvature": "0",
+      "guard": "",
+      "timer_rule": ""
     },
     {
       "guid": "8de1d2c0-dfe5-11e5-95e7-c91fb6748d51",
       "from_guid": "8c41de60-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "85107020-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
-      "curvature": 0
+      "curvature": "0",
+      "guard": "",
+      "timer_rule": ""
     },
     {
       "guid": "a41b5e30-dfe5-11e5-95e7-c91fb6748d51",
       "from_guid": "85107020-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "507fb640-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
-      "curvature": 0,
+      "curvature": "0",
       "production_rule": ""
     },
     {
@@ -84,8 +127,45 @@
       "from_guid": "6fc403d0-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "8c41de60-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
-      "curvature": 0,
+      "curvature": "0",
       "production_rule": "1"
+    },
+    {
+      "guid": "50df3fe0-e0ec-11e5-93a9-2966c9b4b53a",
+      "from_guid": "507fb640-dfe5-11e5-95e7-c91fb6748d51",
+      "to_guid": "50dea3a0-e0ec-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "5bf36690-e0ec-11e5-93a9-2966c9b4b53a",
+      "from_guid": "50dea3a0-e0ec-11e5-93a9-2966c9b4b53a",
+      "to_guid": "5bf31870-e0ec-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0,
+      "production_rule": "3"
+    },
+    {
+      "guid": "61231160-e0ec-11e5-93a9-2966c9b4b53a",
+      "from_guid": "5bf31870-e0ec-11e5-93a9-2966c9b4b53a",
+      "to_guid": "6122c340-e0ec-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "76192050-e0ec-11e5-93a9-2966c9b4b53a",
+      "from_guid": "507fb640-dfe5-11e5-95e7-c91fb6748d51",
+      "to_guid": "7618d230-e0ec-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "8b128aa1-e0ec-11e5-93a9-2966c9b4b53a",
+      "from_guid": "7618d230-e0ec-11e5-93a9-2966c9b4b53a",
+      "to_guid": "8b128aa0-e0ec-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0,
+      "production_rule": "3"
     }
   ]
 }

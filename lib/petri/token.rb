@@ -12,7 +12,7 @@ module Petri
 
     # @return [String, nil]
     def production_rule
-      source_arc && source_arc.data[:production_rule]
+      source_arc && source_arc.production_rule
     end
 
     # @return [Arc, nil]

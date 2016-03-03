@@ -16,5 +16,9 @@ module Petri
     def regular?
       @type == :regular
     end
+
+    def production_rule
+      data[:production_rule]
+    end
   end
 end
