@@ -76,7 +76,7 @@ describe PetriTester::Runner do
       let(:result_data) { subject.tokens.first.data }
 
       it 'produces tokens with filled in data' do
-        subject.execute!('Sum')
+        subject.execute!('Sum', performer_id: @user.id)
         result_data['number'].must_equal 3
       end
 

@@ -30,13 +30,13 @@ module PetriTester
     end
 
     # @param transition_identifier [String]
-    def execute!(transition_identifier)
+    def execute!(transition_identifier, params = {})
       init
       target_transition = transition_by_identifier!(transition_identifier)
 
       PetriTester::ExecutionChain.new(target_transition).each do |level|
         level.each do |transition|
-          Action.new(self, transition).perform!
+          Action.new(self, transition, params).perform!
         end
       end
     end
