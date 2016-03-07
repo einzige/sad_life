@@ -102,7 +102,9 @@
       "guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
       "identifier": "account active",
       "x": 559,
-      "y": 333
+      "y": 333,
+      "start": false,
+      "finish": true
     },
     {
       "guid": "fb493640-e356-11e5-bafe-c7b38310be4a",
@@ -124,7 +126,9 @@
       "guid": "c6ee0e80-e35a-11e5-952a-e368b98b57b7",
       "identifier": "profile created",
       "x": 566,
-      "y": 538
+      "y": 538,
+      "start": false,
+      "finish": true
     },
     {
       "guid": "20353610-e35d-11e5-952a-e368b98b57b7",
@@ -334,7 +338,7 @@
     },
     {
       "guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
-      "x": -30,
+      "x": -35,
       "y": 2043,
       "automated": true
     },
@@ -383,8 +387,8 @@
     {
       "guid": "48f68a60-e36f-11e5-952a-e368b98b57b7",
       "identifier": "Unsubscribe subscribers",
-      "x": 1137,
-      "y": 525,
+      "x": 1211,
+      "y": 526,
       "automated": true
     },
     {
