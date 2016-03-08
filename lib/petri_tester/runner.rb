@@ -93,6 +93,9 @@ module PetriTester
       end
     end
 
+    # Puts tokens in start places
+    # Executes automated actions if any enabled
+    # Fills out weights for futher usage
     def init
       return if @initialized
 
@@ -111,6 +114,7 @@ module PetriTester
 
     private
 
+    # Runs all automated transitions which are enabled at the moment
     def execute_automated!
       @net.transitions.each do |transition|
         if transition_enabled?(transition) && transition.automated?
@@ -119,12 +123,19 @@ module PetriTester
       end
     end
 
+    # Fires transition if enabled, executes binded block
+    # @param transition [Petri::Transition]
+    # @param params [Hash]
     def perform_action(transition, *args)
       if transition_enabled?(transition)
         perform_action!(transition)
       end
     end
 
+    # Fires transition, executes binded block
+    # @raise
+    # @param transition [Petri::Transition]
+    # @param params [Hash]
     def perform_action!(transition, params = {})
       Action.new(self, transition, params).perform!
     end
