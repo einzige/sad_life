@@ -12,8 +12,8 @@ module Petri
     # @param guid [String]
     # @param identifier [String]
     # @param action [String]
-    def add_transition(guid: , identifier: , action: )
-      @transitions << Transition.new(self, {guid: guid, identifier: identifier, action: action})
+    def add_transition(guid: , identifier: , action: , automated: )
+      @transitions << Transition.new(self, {guid: guid, identifier: identifier, action: action, automated: automated})
     end
 
     # @param guid [String]
@@ -60,6 +60,7 @@ module Petri
           hash['transitions'].each do |data|
             net.add_transition(guid: data['guid'],
                                identifier: data['identifier'],
+                               automated: data['automated'],
                                action: data['action'])
           end
 

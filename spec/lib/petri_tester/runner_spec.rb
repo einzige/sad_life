@@ -34,6 +34,17 @@ describe PetriTester::Runner do
       end
     end
 
+    describe 'automated actions' do
+      let(:net) { load_net('automated_action') }
+
+      before { subject.init }
+
+      it 'moves tokens automatically' do
+        subject.tokens.count.must_equal 1
+        subject.tokens.first.place.identifier.must_equal net.node_by_identifier('finish').identifier
+      end
+    end
+
     describe 'tokens data passing' do
       let(:net) { load_net('tokens_data_passing') }
 

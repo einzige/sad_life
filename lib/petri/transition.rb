@@ -6,6 +6,10 @@ module Petri
       @data[:action].presence
     end
 
+    def automated?
+      @data[:automated].present?
+    end
+
     def enabled?
       input_places.all?(&:has_token?)
     end

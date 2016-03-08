@@ -1,0 +1,42 @@
+{
+  "places": [
+    {
+      "guid": "05f42a60-e545-11e5-95ab-7d135fb4f255",
+      "identifier": "start",
+      "x": 247,
+      "y": 137,
+      "start": true
+    },
+    {
+      "guid": "05f42a61-e545-11e5-95ab-7d135fb4f255",
+      "identifier": "finish",
+      "x": 485,
+      "y": 137,
+      "finish": true
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "072d1f90-e545-11e5-95ab-7d135fb4f255",
+      "x": 351,
+      "y": 122,
+      "automated": true
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "072d6db0-e545-11e5-95ab-7d135fb4f255",
+      "from_guid": "05f42a60-e545-11e5-95ab-7d135fb4f255",
+      "to_guid": "072d1f90-e545-11e5-95ab-7d135fb4f255",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "0a27c1f0-e545-11e5-95ab-7d135fb4f255",
+      "from_guid": "072d1f90-e545-11e5-95ab-7d135fb4f255",
+      "to_guid": "05f42a61-e545-11e5-95ab-7d135fb4f255",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}

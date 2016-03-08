@@ -36,9 +36,15 @@ module PetriTester
 
       PetriTester::ExecutionChain.new(target_transition).each do |level|
         level.each do |transition|
-          Action.new(self, transition, params).perform!
+          if transition == target_transition
+            perform_action!(transition, params)
+          else
+            perform_action(transition, params)
+          end
         end
       end
+
+      execute_automated!
     end
 
     # @param transition [Petri::Transition]
@@ -87,8 +93,6 @@ module PetriTester
       end
     end
 
-    private
-
     def init
       return if @initialized
 
@@ -100,7 +104,29 @@ module PetriTester
       # Without weights assigned transition execution path search won't work
       PetriTester::DistanceWeightIndexator.new(@net).reindex
 
+      execute_automated!
+
       @initialized = true
+    end
+
+    private
+
+    def execute_automated!
+      @net.transitions.each do |transition|
+        if transition_enabled?(transition) && transition.automated?
+          perform_action!(transition)
+        end
+      end
+    end
+
+    def perform_action(transition, *args)
+      if transition_enabled?(transition)
+        perform_action!(transition)
+      end
+    end
+
+    def perform_action!(transition, params = {})
+      Action.new(self, transition, params).perform!
     end
 
     # @param identifier [String]
