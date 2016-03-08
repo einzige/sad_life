@@ -40,30 +40,30 @@ module PetriTester
 
     private
 
-    action :create_profile do |name: , blah: |
-      User.create(name: name, blah: blah)
-    end
+    # action :create_profile do |name: , blah: |
+    #   User.create(name: name, blah: blah)
+    # end
+    #
+    # def self.action(name, &block)
+    #   runner.on(name) do |transition|
+    #     user = User.create
+    #     transition.produce do |token|
+    #       token['id'] = user
+    #     end
+    #   end
+    # end
+    #
+    # def create_profile(name: , blah: )
+    #   execute('create_profile') do
+    #     User.create(name: name, blah: blah)
+    #   end
+    # end
 
-    def self.action(name, &block)
-      runner.on(name) do |transition|
-        user = User.create
-        transition.produce do |token|
-          token['id'] = user
-        end
-      end
-    end
-
-    def create_profile(name: , blah: )
-      execute('create_profile') do
-        User.create(name: name, blah: blah)
-      end
-    end
-
-    def execute(tname, parmas = {})
-      ActiveRecord::Transaction do
-        Runner.new(self.net).execute!(tname, parmas.perge({performer_id: performer.id, is_admin: performer.is_admin?}))
-      end
-    end
+    # def execute(tname, parmas = {})
+    #   ActiveRecord::Transaction do
+    #     Runner.new(self.net).execute!(tname, parmas.perge({performer_id: performer.id, is_admin: performer.is_admin?}))
+    #   end
+    # end
 
     # Executes reset arc logic on fire
     def reset_places!

@@ -85,8 +85,8 @@
     {
       "guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
       "identifier": "profile created",
-      "x": -132,
-      "y": 2010,
+      "x": -130,
+      "y": 2057,
       "start": true,
       "finish": false
     },
@@ -129,14 +129,6 @@
       "y": 538,
       "start": false,
       "finish": true
-    },
-    {
-      "guid": "20353610-e35d-11e5-952a-e368b98b57b7",
-      "identifier": "account active",
-      "x": -131,
-      "y": 2140,
-      "start": true,
-      "finish": false
     },
     {
       "guid": "35b9ace0-e35e-11e5-952a-e368b98b57b7",
@@ -994,13 +986,6 @@
       "guard": "profile_id"
     },
     {
-      "guid": "270c4f50-e35d-11e5-952a-e368b98b57b7",
-      "from_guid": "20353610-e35d-11e5-952a-e368b98b57b7",
-      "to_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
       "guid": "4428e570-e35e-11e5-952a-e368b98b57b7",
       "from_guid": "43bf2720-e35e-11e5-952a-e368b98b57b7",
       "to_guid": "4428be60-e35e-11e5-952a-e368b98b57b7",
@@ -1114,20 +1099,13 @@
       "from_guid": "5fec5ac0-e38c-11e5-952a-e368b98b57b7",
       "to_guid": "60fd7ca0-e38c-11e5-952a-e368b98b57b7",
       "type": "regular",
-      "curvature": 0,
+      "curvature": "0",
       "guard": "vacation_days_count"
     },
     {
       "guid": "c3872a10-e38c-11e5-952a-e368b98b57b7",
       "from_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
       "to_guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "c5438010-e38c-11e5-952a-e368b98b57b7",
-      "from_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
-      "to_guid": "20353610-e35d-11e5-952a-e368b98b57b7",
       "type": "regular",
       "curvature": 0
     },
@@ -1292,6 +1270,13 @@
       "guid": "5681f730-e3b2-11e5-952a-e368b98b57b7",
       "from_guid": "f4efa410-e39b-11e5-952a-e368b98b57b7",
       "to_guid": "91555e10-e3a8-11e5-952a-e368b98b57b7",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "47bfe9f0-e542-11e5-95ab-7d135fb4f255",
+      "from_guid": "e8cf0750-e357-11e5-bafe-c7b38310be4a",
+      "to_guid": "b4c61080-e356-11e5-bafe-c7b38310be4a",
       "type": "regular",
       "curvature": 0
     }
