@@ -3,113 +3,113 @@
     {
       "guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
       "identifier": "account active",
-      "x": -182,
-      "y": 561,
+      "x": -391,
+      "y": 560,
       "start": true,
       "finish": false
     },
     {
       "guid": "3778a050-e100-11e5-93a9-2966c9b4b53a",
-      "x": 212,
-      "y": 2679
+      "x": -55,
+      "y": 2612
     },
     {
       "guid": "75559220-e100-11e5-93a9-2966c9b4b53a",
-      "x": 188,
-      "y": 2459
+      "x": -79,
+      "y": 2392
     },
     {
       "guid": "834c3f50-e100-11e5-93a9-2966c9b4b53a",
-      "x": 811,
-      "y": 2457
+      "x": 544,
+      "y": 2390
     },
     {
       "guid": "d29fcb60-e102-11e5-93a9-2966c9b4b53a",
-      "x": 540,
-      "y": 2566
+      "x": 273,
+      "y": 2499
     },
     {
       "guid": "d8686560-e103-11e5-93a9-2966c9b4b53a",
-      "x": 220,
-      "y": 2191
+      "x": -47,
+      "y": 2124
     },
     {
       "guid": "3058c170-e104-11e5-93a9-2966c9b4b53a",
-      "x": 505,
-      "y": 2188
+      "x": 238,
+      "y": 2121
     },
     {
       "guid": "1013b040-e105-11e5-93a9-2966c9b4b53a",
-      "x": 210,
-      "y": 1561
+      "x": -57,
+      "y": 1494
     },
     {
       "guid": "47dbc760-e105-11e5-93a9-2966c9b4b53a",
-      "x": 835,
-      "y": 1565
+      "x": 568,
+      "y": 1498
     },
     {
       "guid": "4e77d370-e105-11e5-93a9-2966c9b4b53a",
-      "x": 554,
-      "y": 1662
+      "x": 287,
+      "y": 1595
     },
     {
       "guid": "356edee0-e106-11e5-93a9-2966c9b4b53a",
-      "x": 227,
-      "y": 1890
+      "x": -40,
+      "y": 1823
     },
     {
       "guid": "3e00a070-e106-11e5-93a9-2966c9b4b53a",
-      "x": 829,
-      "y": 1888
+      "x": 562,
+      "y": 1821
     },
     {
       "guid": "43429ac0-e106-11e5-93a9-2966c9b4b53a",
-      "x": 557,
-      "y": 1985
+      "x": 290,
+      "y": 1918
     },
     {
       "guid": "15edc480-e108-11e5-93a9-2966c9b4b53a",
       "identifier": "post created",
-      "x": 1384,
-      "y": 2185,
+      "x": 1117,
+      "y": 2118,
       "start": false,
       "finish": false
     },
     {
       "guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
       "identifier": "profile created",
-      "x": -130,
-      "y": 2057,
+      "x": -397,
+      "y": 1990,
       "start": true,
       "finish": false
     },
     {
       "guid": "b4c61080-e356-11e5-bafe-c7b38310be4a",
       "identifier": "registered",
-      "x": -135,
-      "y": 324,
+      "x": -394,
+      "y": 333,
       "start": true,
       "finish": false
     },
     {
       "guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
       "identifier": "account active",
-      "x": 113,
-      "y": 325,
+      "x": -146,
+      "y": 334,
       "start": false,
       "finish": true
     },
     {
       "guid": "08f5bb10-e357-11e5-bafe-c7b38310be4a",
       "identifier": "locked",
-      "x": 386,
-      "y": 326
+      "x": 127,
+      "y": 335
     },
     {
       "guid": "c6ee0e80-e35a-11e5-952a-e368b98b57b7",
       "identifier": "profile created",
-      "x": 170,
+      "x": 182,
       "y": 560,
       "start": false,
       "finish": true
@@ -117,291 +117,315 @@
     {
       "guid": "35b9ace0-e35e-11e5-952a-e368b98b57b7",
       "identifier": "account active",
-      "x": -185,
-      "y": 1177,
+      "x": -397,
+      "y": 1190,
       "start": true,
       "finish": false
     },
     {
       "guid": "484a92f0-e36f-11e5-952a-e368b98b57b7",
-      "x": 621,
+      "x": 633,
       "y": 562
     },
     {
       "guid": "35b996f0-e38c-11e5-952a-e368b98b57b7",
-      "x": 172,
+      "x": 184,
       "y": 703
     },
     {
       "guid": "5fec5ac0-e38c-11e5-952a-e368b98b57b7",
-      "x": 555,
+      "x": 567,
       "y": 708
     },
     {
       "guid": "a351f990-e39c-11e5-952a-e368b98b57b7",
-      "x": 248,
-      "y": 979
+      "x": 36,
+      "y": 992
     },
     {
       "guid": "91555e10-e3a8-11e5-952a-e368b98b57b7",
       "identifier": "subscribed",
-      "x": 684,
-      "y": 1178
+      "x": 472,
+      "y": 1191
     },
     {
       "guid": "c071b110-e3aa-11e5-952a-e368b98b57b7",
       "identifier": "billing enabled",
-      "x": 247,
-      "y": 1178
+      "x": 35,
+      "y": 1191
     },
     {
       "guid": "25350890-e3b0-11e5-952a-e368b98b57b7",
-      "x": 4,
-      "y": 1016
+      "x": -208,
+      "y": 1029
+    },
+    {
+      "guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
+      "identifier": "no profile",
+      "x": -143,
+      "y": 560
+    },
+    {
+      "guid": "0b5bbec0-e5ed-11e5-abec-fd3990b9b9fc",
+      "identifier": "subscription cancelled",
+      "x": 778,
+      "y": 1266
     }
   ],
   "transitions": [
     {
       "guid": "c3573c10-e0fd-11e5-93a9-2966c9b4b53a",
       "identifier": "Create profile",
-      "x": -36,
+      "x": -24,
       "y": 546,
       "action": ""
     },
     {
       "guid": "394ac840-e100-11e5-93a9-2966c9b4b53a",
       "identifier": "Create status post",
-      "x": 900,
-      "y": 2662
+      "x": 633,
+      "y": 2595
     },
     {
       "guid": "781e00f0-e100-11e5-93a9-2966c9b4b53a",
       "identifier": "Upload audio",
-      "x": 486,
-      "y": 2444
+      "x": 219,
+      "y": 2377
     },
     {
       "guid": "84a8c210-e100-11e5-93a9-2966c9b4b53a",
       "identifier": "Create audio post",
-      "x": 929,
-      "y": 2444
+      "x": 662,
+      "y": 2377
     },
     {
       "guid": "afaae3d0-e100-11e5-93a9-2966c9b4b53a",
       "identifier": "Delete audio",
-      "x": 758,
-      "y": 2552
+      "x": 491,
+      "y": 2485
     },
     {
       "guid": "275dc8b0-e102-11e5-93a9-2966c9b4b53a",
       "identifier": ">= 15",
-      "x": 298,
-      "y": 2504,
+      "x": 31,
+      "y": 2437,
       "automated": true
     },
     {
       "guid": "da14ab40-e102-11e5-93a9-2966c9b4b53a",
       "identifier": "= 14",
-      "x": 299,
-      "y": 2550,
+      "x": 32,
+      "y": 2483,
       "automated": true
     },
     {
       "guid": "23c94560-e104-11e5-93a9-2966c9b4b53a",
       "identifier": "Upload video",
-      "x": 297,
-      "y": 2174
+      "x": 30,
+      "y": 2107
     },
     {
       "guid": "32b4b2d0-e104-11e5-93a9-2966c9b4b53a",
       "identifier": "Create video post",
-      "x": 966,
-      "y": 2166
+      "x": 699,
+      "y": 2099
     },
     {
       "guid": "3783c710-e104-11e5-93a9-2966c9b4b53a",
       "identifier": "Delete video",
-      "x": 453,
-      "y": 2266
+      "x": 186,
+      "y": 2199
     },
     {
       "guid": "29a678d0-e105-11e5-93a9-2966c9b4b53a",
       "identifier": "Upload document",
-      "x": 489,
-      "y": 1548
+      "x": 222,
+      "y": 1481
     },
     {
       "guid": "49336820-e105-11e5-93a9-2966c9b4b53a",
       "identifier": "Create document post",
-      "x": 960,
-      "y": 1550
+      "x": 693,
+      "y": 1483
     },
     {
       "guid": "4c639970-e105-11e5-93a9-2966c9b4b53a",
       "identifier": "Delete document",
-      "x": 772,
-      "y": 1645
+      "x": 505,
+      "y": 1578
     },
     {
       "guid": "50002120-e105-11e5-93a9-2966c9b4b53a",
       "identifier": "= 4",
-      "x": 337,
-      "y": 1646,
+      "x": 70,
+      "y": 1579,
       "automated": true
     },
     {
       "guid": "62d5c110-e105-11e5-93a9-2966c9b4b53a",
       "identifier": ">= 5",
-      "x": 335,
-      "y": 1591,
+      "x": 68,
+      "y": 1524,
       "automated": true
     },
     {
       "guid": "3ce51e50-e106-11e5-93a9-2966c9b4b53a",
       "identifier": "Upload photo",
-      "x": 502,
-      "y": 1873
+      "x": 235,
+      "y": 1806
     },
     {
       "guid": "401a7fc0-e106-11e5-93a9-2966c9b4b53a",
       "identifier": "Create photo post",
-      "x": 947,
-      "y": 1874
+      "x": 680,
+      "y": 1807
     },
     {
       "guid": "419e1280-e106-11e5-93a9-2966c9b4b53a",
       "identifier": "Delete photo",
-      "x": 776,
-      "y": 1966
+      "x": 509,
+      "y": 1899
     },
     {
       "guid": "44bc6980-e106-11e5-93a9-2966c9b4b53a",
       "identifier": "= 9",
-      "x": 327,
-      "y": 1969,
+      "x": 60,
+      "y": 1902,
       "automated": true
     },
     {
       "guid": "4822ed10-e106-11e5-93a9-2966c9b4b53a",
       "identifier": ">= 10",
-      "x": 326,
-      "y": 1916,
+      "x": 59,
+      "y": 1849,
       "automated": true
     },
     {
       "guid": "31578ed0-e13b-11e5-8f0f-7fb84f6a60ef",
       "identifier": "Delete post",
-      "x": 1602,
-      "y": 2234
+      "x": 1335,
+      "y": 2167
     },
     {
       "guid": "d2c1d7c0-e2c2-11e5-bafe-c7b38310be4a",
       "identifier": "Delete profile",
-      "x": 408,
+      "x": 420,
       "y": 547
     },
     {
       "guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
-      "x": -35,
-      "y": 2043,
+      "x": -302,
+      "y": 1976,
       "automated": true
     },
     {
       "guid": "8220e550-e2da-11e5-bafe-c7b38310be4a",
       "identifier": "Subscribe",
-      "x": 379,
-      "y": 1163
+      "x": 167,
+      "y": 1176
     },
     {
       "guid": "8748a0e0-e2da-11e5-bafe-c7b38310be4a",
       "identifier": "Unsubscribe",
-      "x": 815,
-      "y": 1163
+      "x": 728,
+      "y": 1177
     },
     {
       "guid": "ffdd8b70-e356-11e5-bafe-c7b38310be4a",
       "identifier": "Lock",
-      "x": 241,
-      "y": 308
+      "x": -18,
+      "y": 317
     },
     {
       "guid": "e8cf0750-e357-11e5-bafe-c7b38310be4a",
       "identifier": "Unlock",
-      "x": 493,
-      "y": 311,
+      "x": 234,
+      "y": 320,
       "automated": false
     },
     {
       "guid": "48f68a60-e36f-11e5-952a-e368b98b57b7",
       "identifier": "Unsubscribe subscribers",
-      "x": 815,
+      "x": 827,
       "y": 548,
       "automated": true
     },
     {
       "guid": "b8538af0-e380-11e5-952a-e368b98b57b7",
       "identifier": "Update post",
-      "x": 1604,
-      "y": 2107
+      "x": 1337,
+      "y": 2040
     },
     {
       "guid": "ece1e4c0-e389-11e5-952a-e368b98b57b7",
       "identifier": "Notify subscribers",
-      "x": 1465,
-      "y": 2012,
+      "x": 1198,
+      "y": 1945,
       "automated": true
     },
     {
       "guid": "c77abd50-e38a-11e5-952a-e368b98b57b7",
       "identifier": "Enable vacation mode",
-      "x": -110,
+      "x": -98,
       "y": 688
     },
     {
       "guid": "f0adeb70-e38a-11e5-952a-e368b98b57b7",
       "identifier": "Disable vacation mode",
-      "x": 297,
+      "x": 309,
       "y": 690
     },
     {
       "guid": "60fd7ca0-e38c-11e5-952a-e368b98b57b7",
       "identifier": "Shift billing dates",
-      "x": 832,
+      "x": 844,
       "y": 693,
       "automated": true
     },
     {
       "guid": "f4efa410-e39b-11e5-952a-e368b98b57b7",
       "identifier": "Charge",
-      "x": 217,
-      "y": 862,
+      "x": 5,
+      "y": 875,
       "automated": true
     },
     {
       "guid": "c5977930-e39c-11e5-952a-e368b98b57b7",
       "identifier": "Reject billing",
-      "x": 44,
-      "y": 1055,
+      "x": -168,
+      "y": 1068,
       "automated": true
     },
     {
       "guid": "3fde07a0-e3a6-11e5-952a-e368b98b57b7",
       "identifier": "Restore billing",
-      "x": 329,
-      "y": 1055,
+      "x": 117,
+      "y": 1068,
       "automated": true
     },
     {
       "guid": "96eb9d70-e3a9-11e5-952a-e368b98b57b7",
       "identifier": "Update billing info",
-      "x": -72,
-      "y": 1161
+      "x": -284,
+      "y": 1174
     },
     {
       "guid": "d6059a60-e5de-11e5-92d7-a73c171f12aa",
-      "x": -21,
-      "y": 310,
+      "x": -280,
+      "y": 319,
       "automated": true
+    },
+    {
+      "guid": "3fc02df0-e5ec-11e5-abec-fd3990b9b9fc",
+      "x": -284,
+      "y": 544,
+      "automated": true
+    },
+    {
+      "guid": "3b1b1a70-e5ed-11e5-abec-fd3990b9b9fc",
+      "identifier": "Restore subscription",
+      "x": 391,
+      "y": 1251
     }
   ],
   "arcs": [
@@ -842,7 +866,7 @@
       "from_guid": "c6ee0e80-e35a-11e5-952a-e368b98b57b7",
       "to_guid": "d2c1d7c0-e2c2-11e5-bafe-c7b38310be4a",
       "type": "regular",
-      "curvature": 0,
+      "curvature": "0",
       "guard": "profile_id"
     },
     {
@@ -969,7 +993,7 @@
       "to_guid": "c5977930-e39c-11e5-952a-e368b98b57b7",
       "type": "regular",
       "curvature": 0,
-      "guard": ""
+      "guard": "subscription_id"
     },
     {
       "guid": "91558520-e3a8-11e5-952a-e368b98b57b7",
@@ -983,7 +1007,8 @@
       "from_guid": "91555e10-e3a8-11e5-952a-e368b98b57b7",
       "to_guid": "8748a0e0-e2da-11e5-bafe-c7b38310be4a",
       "type": "regular",
-      "curvature": 0
+      "curvature": 0,
+      "guard": "subscription_id"
     },
     {
       "guid": "c84a82e0-e3aa-11e5-952a-e368b98b57b7",
@@ -1004,7 +1029,8 @@
       "from_guid": "a351f990-e39c-11e5-952a-e368b98b57b7",
       "to_guid": "3fde07a0-e3a6-11e5-952a-e368b98b57b7",
       "type": "regular",
-      "curvature": 0
+      "curvature": 0,
+      "guard": "subscription_id"
     },
     {
       "guid": "49c96c20-e3ae-11e5-952a-e368b98b57b7",
@@ -1113,13 +1139,6 @@
       "curvature": 0
     },
     {
-      "guid": "ec0eee10-e5de-11e5-92d7-a73c171f12aa",
-      "from_guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
-      "to_guid": "c3573c10-e0fd-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
       "guid": "f080c720-e5de-11e5-92d7-a73c171f12aa",
       "from_guid": "35b9ace0-e35e-11e5-952a-e368b98b57b7",
       "to_guid": "96eb9d70-e3a9-11e5-952a-e368b98b57b7",
@@ -1130,6 +1149,56 @@
       "guid": "f3f22020-e5de-11e5-92d7-a73c171f12aa",
       "from_guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
       "to_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "3fc0a320-e5ec-11e5-abec-fd3990b9b9fc",
+      "from_guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
+      "to_guid": "3fc02df0-e5ec-11e5-abec-fd3990b9b9fc",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "405a2400-e5ec-11e5-abec-fd3990b9b9fc",
+      "from_guid": "3fc02df0-e5ec-11e5-abec-fd3990b9b9fc",
+      "to_guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "415091f0-e5ec-11e5-abec-fd3990b9b9fc",
+      "from_guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
+      "to_guid": "c3573c10-e0fd-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "477fd270-e5ec-11e5-abec-fd3990b9b9fc",
+      "from_guid": "d2c1d7c0-e2c2-11e5-bafe-c7b38310be4a",
+      "to_guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
+      "type": "regular",
+      "curvature": -129.0998024409437
+    },
+    {
+      "guid": "0b5c0ce0-e5ed-11e5-abec-fd3990b9b9fc",
+      "from_guid": "8748a0e0-e2da-11e5-bafe-c7b38310be4a",
+      "to_guid": "0b5bbec0-e5ed-11e5-abec-fd3990b9b9fc",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "3b1b8fa0-e5ed-11e5-abec-fd3990b9b9fc",
+      "from_guid": "0b5bbec0-e5ed-11e5-abec-fd3990b9b9fc",
+      "to_guid": "3b1b1a70-e5ed-11e5-abec-fd3990b9b9fc",
+      "type": "regular",
+      "curvature": 0,
+      "guard": "subscription_id"
+    },
+    {
+      "guid": "495debd0-e5ed-11e5-abec-fd3990b9b9fc",
+      "from_guid": "3b1b1a70-e5ed-11e5-abec-fd3990b9b9fc",
+      "to_guid": "91555e10-e3a8-11e5-952a-e368b98b57b7",
       "type": "regular",
       "curvature": 0
     }
