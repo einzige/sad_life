@@ -34,17 +34,19 @@ module PetriTester
       init
       target_transition = transition_by_identifier!(transition_identifier)
 
-      PetriTester::ExecutionChain.new(target_transition).each do |level|
-        level.each do |transition|
-          if transition == target_transition
-            perform_action!(transition, params)
-          else
-            perform_action(transition, params)
+      if transition_enabled?(target_transition)
+        perform_action!(target_transition, params)
+      else
+        PetriTester::ExecutionChain.new(target_transition).each do |level|
+          level.each do |transition|
+            if transition == target_transition
+              perform_action!(transition, params)
+            else
+              perform_action(transition, params)
+            end
           end
         end
       end
-
-      execute_automated!(source: target_transition)
     end
 
     # @param transition [Petri::Transition]
@@ -186,7 +188,9 @@ module PetriTester
     # @param transition [Petri::Transition]
     # @param params [Hash]
     def perform_action!(transition, params = {})
-      Action.new(self, transition, params).perform!
+      Action.new(self, transition, params).perform!.tap do
+        execute_automated!(source: transition)
+      end
     end
 
     # @param identifier [String]
