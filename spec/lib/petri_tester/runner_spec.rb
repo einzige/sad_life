@@ -1,6 +1,15 @@
 describe PetriTester::Runner do
   subject { PetriTester::Runner.new(net) }
 
+  describe 'shit' do
+    let(:net) { load_net('x') }
+
+    it 'rocks' do
+      subject.init
+      subject.execute!('Create profile')
+    end
+  end
+
   describe '#execute' do
     describe 'reachable transition' do
       let(:net) { load_net('reproduction') }
@@ -41,8 +50,7 @@ describe PetriTester::Runner do
       before { subject.init }
 
       it 'moves tokens automatically' do
-        subject.tokens.count.must_equal 2
-        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finish start)
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finish)
       end
     end
 
@@ -51,14 +59,14 @@ describe PetriTester::Runner do
 
       it 'enables second flow' do
         subject.execute!('1')
-        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(passed passed started)
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(passed passed)
         subject.execute!('2')
-        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finished passed passed started)
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finished passed)
       end
 
       it 'disables connected flow' do
         subject.execute!('4')
-        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(after4 started)
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(after4)
         error = assert_raises(ArgumentError) { subject.execute!('2') }
         error.message.must_match /'2' is not enabled/i
       end
@@ -112,12 +120,12 @@ describe PetriTester::Runner do
 
       it 'works with conditionals returning false' do
         subject.execute!('<')
-        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(start sum)
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(sum)
       end
 
       it 'works with conditionals returning true' do
         subject.execute!('>=')
-        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finish start)
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finish)
       end
     end
   end

@@ -59,7 +59,7 @@ module PetriTester
       end
 
       has_termination_tokens = @terminators[transition].all? do |termination_place|
-        @tokens.any? { |token| token.place == termination_place }
+        termination_place[:enabled]
       end
 
       has_input_tokens && has_termination_tokens
@@ -75,8 +75,9 @@ module PetriTester
         if place.finish?
           links = @net.places.select { |p| p.start? && p.identifier == place.identifier }
 
-          links.each do |place|
-            @tokens << Petri::Token.new(place)
+          links.each do |link|
+            put_token(link)
+            link[:enabled] = true
           end
         end
       end
@@ -88,7 +89,12 @@ module PetriTester
       @tokens.each do |token|
         if token.place == place
           @tokens.delete(token)
-          place.links.each(&method(:remove_token))
+
+          place.links.each do |link|
+            remove_token(link)
+            link[:enabled] = false
+          end
+
           return token
         end
       end
@@ -120,6 +126,7 @@ module PetriTester
 
       # Fill start places with tokens to let the process start
       put_token(start_place)
+      start_place[:enabled] = true
 
       # Terminators are used to identify which transitions can be executed
       @terminators = {}

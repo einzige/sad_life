@@ -416,16 +416,17 @@
       "automated": true
     },
     {
-      "guid": "3fc02df0-e5ec-11e5-abec-fd3990b9b9fc",
-      "x": -284,
-      "y": 544,
-      "automated": true
-    },
-    {
       "guid": "3b1b1a70-e5ed-11e5-abec-fd3990b9b9fc",
       "identifier": "Restore subscription",
       "x": 391,
       "y": 1251
+    },
+    {
+      "guid": "66477920-e5f0-11e5-abec-fd3990b9b9fc",
+      "identifier": "",
+      "x": -281,
+      "y": 545,
+      "automated": true
     }
   ],
   "arcs": [
@@ -1153,20 +1154,6 @@
       "curvature": 0
     },
     {
-      "guid": "3fc0a320-e5ec-11e5-abec-fd3990b9b9fc",
-      "from_guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
-      "to_guid": "3fc02df0-e5ec-11e5-abec-fd3990b9b9fc",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "405a2400-e5ec-11e5-abec-fd3990b9b9fc",
-      "from_guid": "3fc02df0-e5ec-11e5-abec-fd3990b9b9fc",
-      "to_guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
       "guid": "415091f0-e5ec-11e5-abec-fd3990b9b9fc",
       "from_guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
       "to_guid": "c3573c10-e0fd-11e5-93a9-2966c9b4b53a",
@@ -1199,6 +1186,20 @@
       "guid": "495debd0-e5ed-11e5-abec-fd3990b9b9fc",
       "from_guid": "3b1b1a70-e5ed-11e5-abec-fd3990b9b9fc",
       "to_guid": "91555e10-e3a8-11e5-952a-e368b98b57b7",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "66483c70-e5f0-11e5-abec-fd3990b9b9fc",
+      "from_guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
+      "to_guid": "66477920-e5f0-11e5-abec-fd3990b9b9fc",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "677327e0-e5f0-11e5-abec-fd3990b9b9fc",
+      "from_guid": "66477920-e5f0-11e5-abec-fd3990b9b9fc",
+      "to_guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
       "type": "regular",
       "curvature": 0
     }
