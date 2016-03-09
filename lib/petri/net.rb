@@ -2,54 +2,13 @@ module Petri
   class Net
     include NetLoader
 
-    attr_reader :places, :transitions, :arcs, :tokens
+    attr_reader :places, :transitions, :arcs
 
     def initialize
       @transitions = []
       @places = []
       @arcs = []
-      @tokens = []
       @data = {}
-    end
-
-    # Lets the process be started
-    # Populates tokens in start places
-    def init
-      places.each do |place|
-        put_token(place) if place.start?
-      end
-    end
-
-    # @param place [Place]
-    # @return [Token]
-    def put_token(place)
-      Token.new(place).tap do |token|
-        @tokens << token
-      end
-    end
-
-    # @param place [Place]
-    # @return [Token, nil]
-    def remove_token(place)
-      @tokens.each do |token|
-        if token.place == place
-          @tokens.delete(token)
-          return token
-        end
-      end
-      nil
-    end
-
-    # @param place [Place]
-    # @return [Array<Token>]
-    def reset_tokens(place)
-      [].tap do |result|
-        @tokens.each do |token|
-          result << token if token.place == place
-        end
-
-        result.each { |token| @tokens.delete(token) }
-      end
     end
 
     # @return [Place]

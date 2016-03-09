@@ -7,17 +7,6 @@ describe Petri::Place do
     subject.net.must_equal net
   end
 
-  describe '#has_token?' do
-    it 'returns false' do
-      subject.has_token?.must_equal false
-    end
-
-    it 'returns true if token present' do
-      net.put_token(subject)
-      subject.has_token?.must_equal true
-    end
-  end
-
   describe '#reset_arcs' do
     let(:net) { load_net('reset_arc') }
 

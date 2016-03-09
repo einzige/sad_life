@@ -10,18 +10,6 @@ module Petri
       @data[:automated].present?
     end
 
-    def enabled?
-      input_places.all?(&:has_token?)
-    end
-
-    def fire!(&block)
-      raise ArgumentError, 'Transition is not enabled' unless enabled?
-      reset_places!
-      consume_tokens!
-      block.try(:call)
-      produce_tokens!
-    end
-
     def input_places
       input_nodes
     end
