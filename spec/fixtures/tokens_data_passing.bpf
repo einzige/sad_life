@@ -3,8 +3,8 @@
     {
       "guid": "507f8f30-dfe5-11e5-95e7-c91fb6748d51",
       "identifier": "start",
-      "x": 402,
-      "y": 257,
+      "x": 382,
+      "y": 254,
       "start": true
     },
     {
@@ -160,16 +160,9 @@
       "production_rule": "2"
     },
     {
-      "guid": "ef78f2e0-e5c4-11e5-92d7-a73c171f12aa",
+      "guid": "b44cfc00-e5df-11e5-abec-fd3990b9b9fc",
       "from_guid": "507f8f30-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "f4e7b5a0-e0fa-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "f0794be0-e5c4-11e5-92d7-a73c171f12aa",
-      "from_guid": "f4e7b5a0-e0fa-11e5-93a9-2966c9b4b53a",
-      "to_guid": "507f8f30-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
       "curvature": 0
     }

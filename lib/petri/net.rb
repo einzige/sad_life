@@ -55,8 +55,8 @@ module Petri
     # @return [Place]
     def start_place
       start_places = @places.select(&:start?).select do |place|
-        connected = places_by_identifier(place.identifier)
-        connected.one? || connected.empty?
+        place.identifier.blank? ||
+          places_by_identifier(place.identifier).select(&:finish?).empty?
       end
 
       raise ArgumentError, 'There are more than one start places' if start_places.many?

@@ -73,23 +73,16 @@
       "curvature": 0
     },
     {
-      "guid": "af1565f0-e5b3-11e5-92d7-a73c171f12aa",
-      "from_guid": "a4526bf0-e544-11e5-95ab-7d135fb4f255",
-      "to_guid": "a6ac1360-e544-11e5-95ab-7d135fb4f255",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "b944aae0-e5b3-11e5-92d7-a73c171f12aa",
-      "from_guid": "a6ac1360-e544-11e5-95ab-7d135fb4f255",
-      "to_guid": "a4526bf0-e544-11e5-95ab-7d135fb4f255",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
       "guid": "f16fad10-e5b4-11e5-92d7-a73c171f12aa",
       "from_guid": "e05cc0a0-e544-11e5-95ab-7d135fb4f255",
       "to_guid": "edd34c70-e5b4-11e5-92d7-a73c171f12aa",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "ce3ed480-e5df-11e5-abec-fd3990b9b9fc",
+      "from_guid": "a4526bf0-e544-11e5-95ab-7d135fb4f255",
+      "to_guid": "a6ac1360-e544-11e5-95ab-7d135fb4f255",
       "type": "regular",
       "curvature": 0
     }

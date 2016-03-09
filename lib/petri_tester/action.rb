@@ -74,8 +74,10 @@ module PetriTester
 
     def consume_tokens!
       @consumed_tokens = transition.input_places.map do |place|
-        kase.remove_token(place).tap do |token|
-          token.data.merge!(params)
+        unless place.start?
+          kase.remove_token(place).tap do |token|
+            token.data.merge!(params)
+          end
         end
       end.compact
     end

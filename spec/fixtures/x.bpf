@@ -3,8 +3,8 @@
     {
       "guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
       "identifier": "account active",
-      "x": -132,
-      "y": 544,
+      "x": -182,
+      "y": 561,
       "start": true,
       "finish": false
     },
@@ -77,12 +77,6 @@
       "finish": false
     },
     {
-      "guid": "20b39df0-e125-11e5-93a9-2966c9b4b53a",
-      "identifier": "",
-      "x": 250,
-      "y": 543
-    },
-    {
       "guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
       "identifier": "profile created",
       "x": -130,
@@ -93,91 +87,76 @@
     {
       "guid": "b4c61080-e356-11e5-bafe-c7b38310be4a",
       "identifier": "registered",
-      "x": -132,
-      "y": 256,
+      "x": -135,
+      "y": 324,
       "start": true,
       "finish": false
     },
     {
       "guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
       "identifier": "account active",
-      "x": 559,
-      "y": 333,
+      "x": 113,
+      "y": 325,
       "start": false,
       "finish": true
     },
     {
-      "guid": "fb493640-e356-11e5-bafe-c7b38310be4a",
-      "x": 557,
-      "y": 256
-    },
-    {
       "guid": "08f5bb10-e357-11e5-bafe-c7b38310be4a",
       "identifier": "locked",
-      "x": 750,
-      "y": 156
-    },
-    {
-      "guid": "e9709e80-e357-11e5-bafe-c7b38310be4a",
-      "x": 216,
-      "y": 256
+      "x": 386,
+      "y": 326
     },
     {
       "guid": "c6ee0e80-e35a-11e5-952a-e368b98b57b7",
       "identifier": "profile created",
-      "x": 566,
-      "y": 538,
+      "x": 170,
+      "y": 560,
       "start": false,
       "finish": true
     },
     {
       "guid": "35b9ace0-e35e-11e5-952a-e368b98b57b7",
       "identifier": "account active",
-      "x": -123,
-      "y": 1179,
+      "x": -185,
+      "y": 1177,
       "start": true,
       "finish": false
     },
     {
-      "guid": "4428be60-e35e-11e5-952a-e368b98b57b7",
-      "x": 130,
-      "y": 1177
-    },
-    {
       "guid": "484a92f0-e36f-11e5-952a-e368b98b57b7",
-      "x": 1017,
-      "y": 540
+      "x": 621,
+      "y": 562
     },
     {
       "guid": "35b996f0-e38c-11e5-952a-e368b98b57b7",
-      "x": 568,
-      "y": 681
+      "x": 172,
+      "y": 703
     },
     {
       "guid": "5fec5ac0-e38c-11e5-952a-e368b98b57b7",
-      "x": 951,
-      "y": 686
+      "x": 555,
+      "y": 708
     },
     {
       "guid": "a351f990-e39c-11e5-952a-e368b98b57b7",
-      "x": 527,
+      "x": 248,
       "y": 979
     },
     {
       "guid": "91555e10-e3a8-11e5-952a-e368b98b57b7",
       "identifier": "subscribed",
-      "x": 963,
+      "x": 684,
       "y": 1178
     },
     {
       "guid": "c071b110-e3aa-11e5-952a-e368b98b57b7",
       "identifier": "billing enabled",
-      "x": 526,
+      "x": 247,
       "y": 1178
     },
     {
       "guid": "25350890-e3b0-11e5-952a-e368b98b57b7",
-      "x": 283,
+      "x": 4,
       "y": 1016
     }
   ],
@@ -185,8 +164,8 @@
     {
       "guid": "c3573c10-e0fd-11e5-93a9-2966c9b4b53a",
       "identifier": "Create profile",
-      "x": 360,
-      "y": 524,
+      "x": -36,
+      "y": 546,
       "action": ""
     },
     {
@@ -310,13 +289,6 @@
       "automated": true
     },
     {
-      "guid": "0cc42990-e125-11e5-93a9-2966c9b4b53a",
-      "identifier": "",
-      "x": 95,
-      "y": 528,
-      "automated": true
-    },
-    {
       "guid": "31578ed0-e13b-11e5-8f0f-7fb84f6a60ef",
       "identifier": "Delete post",
       "x": 1602,
@@ -325,8 +297,8 @@
     {
       "guid": "d2c1d7c0-e2c2-11e5-bafe-c7b38310be4a",
       "identifier": "Delete profile",
-      "x": 804,
-      "y": 525
+      "x": 408,
+      "y": 547
     },
     {
       "guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
@@ -337,50 +309,33 @@
     {
       "guid": "8220e550-e2da-11e5-bafe-c7b38310be4a",
       "identifier": "Subscribe",
-      "x": 658,
+      "x": 379,
       "y": 1163
     },
     {
       "guid": "8748a0e0-e2da-11e5-bafe-c7b38310be4a",
       "identifier": "Unsubscribe",
-      "x": 1094,
+      "x": 815,
       "y": 1163
-    },
-    {
-      "guid": "b69181b0-e356-11e5-bafe-c7b38310be4a",
-      "x": 332,
-      "y": 242,
-      "automated": true
     },
     {
       "guid": "ffdd8b70-e356-11e5-bafe-c7b38310be4a",
       "identifier": "Lock",
-      "x": 725,
-      "y": 240
-    },
-    {
-      "guid": "9a4cea20-e357-11e5-bafe-c7b38310be4a",
-      "identifier": "Unlock",
-      "x": 525,
-      "y": 139
+      "x": 241,
+      "y": 308
     },
     {
       "guid": "e8cf0750-e357-11e5-bafe-c7b38310be4a",
-      "x": 74,
-      "y": 242,
-      "automated": true
-    },
-    {
-      "guid": "43bf2720-e35e-11e5-952a-e368b98b57b7",
-      "x": -8,
-      "y": 1165,
-      "automated": true
+      "identifier": "Unlock",
+      "x": 493,
+      "y": 311,
+      "automated": false
     },
     {
       "guid": "48f68a60-e36f-11e5-952a-e368b98b57b7",
       "identifier": "Unsubscribe subscribers",
-      "x": 1211,
-      "y": 526,
+      "x": 815,
+      "y": 548,
       "automated": true
     },
     {
@@ -399,48 +354,54 @@
     {
       "guid": "c77abd50-e38a-11e5-952a-e368b98b57b7",
       "identifier": "Enable vacation mode",
-      "x": 286,
-      "y": 666
+      "x": -110,
+      "y": 688
     },
     {
       "guid": "f0adeb70-e38a-11e5-952a-e368b98b57b7",
       "identifier": "Disable vacation mode",
-      "x": 693,
-      "y": 668
+      "x": 297,
+      "y": 690
     },
     {
       "guid": "60fd7ca0-e38c-11e5-952a-e368b98b57b7",
       "identifier": "Shift billing dates",
-      "x": 1228,
-      "y": 671,
+      "x": 832,
+      "y": 693,
       "automated": true
     },
     {
       "guid": "f4efa410-e39b-11e5-952a-e368b98b57b7",
       "identifier": "Charge",
-      "x": 496,
+      "x": 217,
       "y": 862,
       "automated": true
     },
     {
       "guid": "c5977930-e39c-11e5-952a-e368b98b57b7",
       "identifier": "Reject billing",
-      "x": 323,
+      "x": 44,
       "y": 1055,
       "automated": true
     },
     {
       "guid": "3fde07a0-e3a6-11e5-952a-e368b98b57b7",
       "identifier": "Restore billing",
-      "x": 608,
+      "x": 329,
       "y": 1055,
       "automated": true
     },
     {
       "guid": "96eb9d70-e3a9-11e5-952a-e368b98b57b7",
       "identifier": "Update billing info",
-      "x": 207,
+      "x": -72,
       "y": 1161
+    },
+    {
+      "guid": "d6059a60-e5de-11e5-92d7-a73c171f12aa",
+      "x": -21,
+      "y": 310,
+      "automated": true
     }
   ],
   "arcs": [
@@ -828,27 +789,6 @@
       "production_rule": ""
     },
     {
-      "guid": "20b39df1-e125-11e5-93a9-2966c9b4b53a",
-      "from_guid": "0cc42990-e125-11e5-93a9-2966c9b4b53a",
-      "to_guid": "20b39df0-e125-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": "0"
-    },
-    {
-      "guid": "21fdaa20-e125-11e5-93a9-2966c9b4b53a",
-      "from_guid": "20b39df0-e125-11e5-93a9-2966c9b4b53a",
-      "to_guid": "c3573c10-e0fd-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "261d2910-e2c8-11e5-bafe-c7b38310be4a",
-      "from_guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
-      "to_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": "0"
-    },
-    {
       "guid": "2ac3f4d0-e2c8-11e5-bafe-c7b38310be4a",
       "from_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
       "to_guid": "1013b040-e105-11e5-93a9-2966c9b4b53a",
@@ -884,91 +824,11 @@
       "curvature": 0
     },
     {
-      "guid": "ba3254c0-e2ca-11e5-bafe-c7b38310be4a",
-      "from_guid": "d2c1d7c0-e2c2-11e5-bafe-c7b38310be4a",
-      "to_guid": "20b39df0-e125-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": -119.31470629719591
-    },
-    {
-      "guid": "c2632c01-e356-11e5-bafe-c7b38310be4a",
-      "from_guid": "b69181b0-e356-11e5-bafe-c7b38310be4a",
-      "to_guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "fb495d50-e356-11e5-bafe-c7b38310be4a",
-      "from_guid": "b69181b0-e356-11e5-bafe-c7b38310be4a",
-      "to_guid": "fb493640-e356-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "ffde00a0-e356-11e5-bafe-c7b38310be4a",
-      "from_guid": "fb493640-e356-11e5-bafe-c7b38310be4a",
-      "to_guid": "ffdd8b70-e356-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0,
-      "guard": "user_id"
-    },
-    {
       "guid": "08f5e220-e357-11e5-bafe-c7b38310be4a",
       "from_guid": "ffdd8b70-e356-11e5-bafe-c7b38310be4a",
       "to_guid": "08f5bb10-e357-11e5-bafe-c7b38310be4a",
       "type": "regular",
       "curvature": 0
-    },
-    {
-      "guid": "7bfa0170-e357-11e5-bafe-c7b38310be4a",
-      "from_guid": "ffdd8b70-e356-11e5-bafe-c7b38310be4a",
-      "to_guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
-      "type": "reset",
-      "curvature": 0
-    },
-    {
-      "guid": "9a4d5f50-e357-11e5-bafe-c7b38310be4a",
-      "from_guid": "08f5bb10-e357-11e5-bafe-c7b38310be4a",
-      "to_guid": "9a4cea20-e357-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0,
-      "guard": "user_id"
-    },
-    {
-      "guid": "aa1a7a30-e357-11e5-bafe-c7b38310be4a",
-      "from_guid": "9a4cea20-e357-11e5-bafe-c7b38310be4a",
-      "to_guid": "fb493640-e356-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "e8cf7c80-e357-11e5-bafe-c7b38310be4a",
-      "from_guid": "b4c61080-e356-11e5-bafe-c7b38310be4a",
-      "to_guid": "e8cf0750-e357-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0,
-      "guard": "user_id"
-    },
-    {
-      "guid": "e970c590-e357-11e5-bafe-c7b38310be4a",
-      "from_guid": "e8cf0750-e357-11e5-bafe-c7b38310be4a",
-      "to_guid": "e9709e80-e357-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "ea309320-e357-11e5-bafe-c7b38310be4a",
-      "from_guid": "e9709e80-e357-11e5-bafe-c7b38310be4a",
-      "to_guid": "b69181b0-e356-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "03dc8900-e358-11e5-bafe-c7b38310be4a",
-      "from_guid": "9a4cea20-e357-11e5-bafe-c7b38310be4a",
-      "to_guid": "e9709e80-e357-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": "0"
     },
     {
       "guid": "c6ee83b0-e35a-11e5-952a-e368b98b57b7",
@@ -986,13 +846,6 @@
       "guard": "profile_id"
     },
     {
-      "guid": "4428e570-e35e-11e5-952a-e368b98b57b7",
-      "from_guid": "43bf2720-e35e-11e5-952a-e368b98b57b7",
-      "to_guid": "4428be60-e35e-11e5-952a-e368b98b57b7",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
       "guid": "484ae110-e36f-11e5-952a-e368b98b57b7",
       "from_guid": "d2c1d7c0-e2c2-11e5-bafe-c7b38310be4a",
       "to_guid": "484a92f0-e36f-11e5-952a-e368b98b57b7",
@@ -1006,34 +859,6 @@
       "type": "regular",
       "curvature": 0,
       "guard": "profile_id"
-    },
-    {
-      "guid": "ca8c1270-e37e-11e5-952a-e368b98b57b7",
-      "from_guid": "35b9ace0-e35e-11e5-952a-e368b98b57b7",
-      "to_guid": "43bf2720-e35e-11e5-952a-e368b98b57b7",
-      "type": "regular",
-      "curvature": -1.2419136631234642
-    },
-    {
-      "guid": "ce579960-e37e-11e5-952a-e368b98b57b7",
-      "from_guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
-      "to_guid": "0cc42990-e125-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "e4a214c0-e37e-11e5-952a-e368b98b57b7",
-      "from_guid": "0cc42990-e125-11e5-93a9-2966c9b4b53a",
-      "to_guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "e5e87770-e37e-11e5-952a-e368b98b57b7",
-      "from_guid": "43bf2720-e35e-11e5-952a-e368b98b57b7",
-      "to_guid": "35b9ace0-e35e-11e5-952a-e368b98b57b7",
-      "type": "regular",
-      "curvature": 0
     },
     {
       "guid": "d74572c0-e380-11e5-952a-e368b98b57b7",
@@ -1103,13 +928,6 @@
       "guard": "vacation_days_count"
     },
     {
-      "guid": "c3872a10-e38c-11e5-952a-e368b98b57b7",
-      "from_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
-      "to_guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
       "guid": "c4d3c6f0-e38f-11e5-952a-e368b98b57b7",
       "from_guid": "c6ee0e80-e35a-11e5-952a-e368b98b57b7",
       "to_guid": "c77abd50-e38a-11e5-952a-e368b98b57b7",
@@ -1164,20 +982,6 @@
       "guid": "92b2cb30-e3a8-11e5-952a-e368b98b57b7",
       "from_guid": "91555e10-e3a8-11e5-952a-e368b98b57b7",
       "to_guid": "8748a0e0-e2da-11e5-bafe-c7b38310be4a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "96ebeb90-e3a9-11e5-952a-e368b98b57b7",
-      "from_guid": "4428be60-e35e-11e5-952a-e368b98b57b7",
-      "to_guid": "96eb9d70-e3a9-11e5-952a-e368b98b57b7",
-      "type": "regular",
-      "curvature": 0.006136397688075196
-    },
-    {
-      "guid": "985b5a10-e3a9-11e5-952a-e368b98b57b7",
-      "from_guid": "96eb9d70-e3a9-11e5-952a-e368b98b57b7",
-      "to_guid": "4428be60-e35e-11e5-952a-e368b98b57b7",
       "type": "regular",
       "curvature": 0
     },
@@ -1274,9 +1078,58 @@
       "curvature": 0
     },
     {
-      "guid": "47bfe9f0-e542-11e5-95ab-7d135fb4f255",
+      "guid": "5b051320-e5c7-11e5-92d7-a73c171f12aa",
       "from_guid": "e8cf0750-e357-11e5-bafe-c7b38310be4a",
-      "to_guid": "b4c61080-e356-11e5-bafe-c7b38310be4a",
+      "to_guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
+      "type": "regular",
+      "curvature": -91.99646468490381
+    },
+    {
+      "guid": "6044ea90-e5c7-11e5-92d7-a73c171f12aa",
+      "from_guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
+      "to_guid": "ffdd8b70-e356-11e5-bafe-c7b38310be4a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "71fce580-e5c7-11e5-92d7-a73c171f12aa",
+      "from_guid": "08f5bb10-e357-11e5-bafe-c7b38310be4a",
+      "to_guid": "e8cf0750-e357-11e5-bafe-c7b38310be4a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "d6060f90-e5de-11e5-92d7-a73c171f12aa",
+      "from_guid": "b4c61080-e356-11e5-bafe-c7b38310be4a",
+      "to_guid": "d6059a60-e5de-11e5-92d7-a73c171f12aa",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "d713fd20-e5de-11e5-92d7-a73c171f12aa",
+      "from_guid": "d6059a60-e5de-11e5-92d7-a73c171f12aa",
+      "to_guid": "c2632c00-e356-11e5-bafe-c7b38310be4a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "ec0eee10-e5de-11e5-92d7-a73c171f12aa",
+      "from_guid": "6dba8970-e0fc-11e5-93a9-2966c9b4b53a",
+      "to_guid": "c3573c10-e0fd-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "f080c720-e5de-11e5-92d7-a73c171f12aa",
+      "from_guid": "35b9ace0-e35e-11e5-952a-e368b98b57b7",
+      "to_guid": "96eb9d70-e3a9-11e5-952a-e368b98b57b7",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "f3f22020-e5de-11e5-92d7-a73c171f12aa",
+      "from_guid": "cce8db50-e2c7-11e5-bafe-c7b38310be4a",
+      "to_guid": "261cdaf0-e2c8-11e5-bafe-c7b38310be4a",
       "type": "regular",
       "curvature": 0
     }
