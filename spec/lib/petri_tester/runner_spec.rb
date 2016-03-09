@@ -49,15 +49,18 @@ describe PetriTester::Runner do
     describe 'multiple flows' do
       let(:net) { load_net('multiple_flows') }
 
-      before { subject.execute!('1') }
-
       it 'enables second flow' do
+        subject.execute!('1')
         subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(passed passed started)
         subject.execute!('2')
         subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finished passed passed started)
+      end
 
-        #error = assert_raises(ArgumentError) { subject.execute!('3') }
-        #error.message.must_match /'3' is not enabled/i
+      it 'disables connected flow' do
+        subject.execute!('4')
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(after4 started)
+        error = assert_raises(ArgumentError) { subject.execute!('2') }
+        error.message.must_match /'2' is not enabled/i
       end
     end
 

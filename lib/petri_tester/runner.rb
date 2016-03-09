@@ -86,6 +86,7 @@ module PetriTester
       @tokens.each do |token|
         if token.place == place
           @tokens.delete(token)
+          place.links.each(&method(:remove_token))
           return token
         end
       end

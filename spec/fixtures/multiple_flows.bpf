@@ -27,6 +27,12 @@
       "identifier": "finished",
       "x": 487,
       "y": 352
+    },
+    {
+      "guid": "9a506660-e5e5-11e5-abec-fd3990b9b9fc",
+      "identifier": "after4",
+      "x": 796,
+      "y": 187
     }
   ],
   "transitions": [
@@ -48,6 +54,12 @@
       "identifier": "3",
       "x": 576,
       "y": 410
+    },
+    {
+      "guid": "16e7d590-e5e2-11e5-abec-fd3990b9b9fc",
+      "identifier": "4",
+      "x": 636,
+      "y": 163
     }
   ],
   "arcs": [
@@ -83,6 +95,20 @@
       "guid": "ce3ed480-e5df-11e5-abec-fd3990b9b9fc",
       "from_guid": "a4526bf0-e544-11e5-95ab-7d135fb4f255",
       "to_guid": "a6ac1360-e544-11e5-95ab-7d135fb4f255",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "16e871d0-e5e2-11e5-abec-fd3990b9b9fc",
+      "from_guid": "a4529300-e544-11e5-95ab-7d135fb4f255",
+      "to_guid": "16e7d590-e5e2-11e5-abec-fd3990b9b9fc",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "9a50b480-e5e5-11e5-abec-fd3990b9b9fc",
+      "from_guid": "16e7d590-e5e2-11e5-abec-fd3990b9b9fc",
+      "to_guid": "9a506660-e5e5-11e5-abec-fd3990b9b9fc",
       "type": "regular",
       "curvature": 0
     }
