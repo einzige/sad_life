@@ -17,18 +17,19 @@ module PetriTester
     def perform!(params = {})
       raise ArgumentError, "Transition '#{transition.identifier}' is not enabled" unless kase.transition_enabled?(transition)
 
-      reset_places!
       consume_tokens!
 
       if execution_callback
         execution_callback.call(self).tap do |result|
           if result
+            reset_places!
             produce_tokens!
           else
             unconsume_tokens!
           end
         end
       else
+        reset_places!
         produce_tokens!
         true
       end
