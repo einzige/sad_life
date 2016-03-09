@@ -50,9 +50,17 @@ module PetriTester
     # @param transition [Petri::Transition]
     # @return [true, false]
     def transition_enabled?(transition)
-      transition.input_places.all? do |place|
+      return false unless @initialized
+
+      has_input_tokens = transition.input_places.all? do |place|
         @tokens.any? { |token| token.place == place }
       end
+
+      has_termination_tokens = @terminators[transition].all? do |termination_place|
+        @tokens.any? { |token| token.place == termination_place }
+      end
+
+      has_input_tokens && has_termination_tokens
     end
 
     # @param place [Place]
@@ -108,17 +116,50 @@ module PetriTester
       return if @initialized
 
       # Fill start places with tokens to let the process start
-      start_places.each(&method(:put_token))
+      put_token(start_place)
+
+      # Terminators are used to identify which transitions can be executed
+      @terminators = {}
+      @net.places.select(&:start?).each do |start_place|
+        outgoing_transitions(start_place).each do |transition|
+          (@terminators[transition] ||= []) << start_place
+        end
+      end
 
       # Without weights assigned transition execution path search won't work
       PetriTester::DistanceWeightIndexator.new(@net).reindex
 
-      execute_automated!
-
       @initialized = true
+      execute_automated!
+    end
+
+    def tokens_at(place_identifier)
+      @tokens.select do |token|
+        token.place == @net.node_by_identifier(place_identifier)
+      end
     end
 
     private
+
+    def outgoing_nodes(node, nodes = [])
+      node.output_nodes.each do |n|
+        unless nodes.include?(n)
+          outgoing_nodes(n, nodes << n)
+
+          if n.is_a? Petri::Place
+            n.links.each do |link|
+              outgoing_nodes(link, nodes)
+            end
+          end
+        end
+      end
+
+      nodes
+    end
+
+    def outgoing_transitions(place)
+      outgoing_nodes(place).select { |n| n.is_a? Petri::Transition }
+    end
 
     # Runs all automated transitions which are enabled at the moment
     # @param source [Petri::Transition]
@@ -162,13 +203,10 @@ module PetriTester
     end
 
     # @return [Array<Petri::Place>]
-    def start_places
-      @net.places.select do |place|
-        if place.start?
-          connected = places_by_identifier(place.identifier)
-          connected.one? || connected.empty?
-        end
-      end
+    def start_place
+      @start_place ||= @net.places.find do |place|
+        place.start? && (place.identifier.blank? || places_by_identifier(place.identifier).one?)
+      end or raise 'No start place in the net'
     end
   end
 end

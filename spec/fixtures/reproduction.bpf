@@ -2,7 +2,7 @@
   "places": [
     {
       "guid": "0ba8d480-d71f-11e5-921f-a5d2a35a07d4",
-      "x": 89,
+      "x": -51,
       "y": 340,
       "start": true
     },
@@ -47,6 +47,11 @@
       "guid": "f1e09550-d724-11e5-921f-a5d2a35a07d4",
       "x": 685,
       "y": 657
+    },
+    {
+      "guid": "38c28870-e5c1-11e5-92d7-a73c171f12aa",
+      "x": 98,
+      "y": 343
     }
   ],
   "transitions": [
@@ -126,16 +131,15 @@
       "x": 798,
       "y": 643,
       "action": "go_home"
+    },
+    {
+      "guid": "3527fc90-e5c1-11e5-92d7-a73c171f12aa",
+      "x": 20,
+      "y": 326,
+      "automated": true
     }
   ],
   "arcs": [
-    {
-      "guid": "15a9b670-d71f-11e5-921f-a5d2a35a07d4",
-      "from_guid": "0ba8d480-d71f-11e5-921f-a5d2a35a07d4",
-      "to_guid": "15a8f320-d71f-11e5-921f-a5d2a35a07d4",
-      "type": "regular",
-      "curvature": 0
-    },
     {
       "guid": "292f4570-d71f-11e5-921f-a5d2a35a07d4",
       "from_guid": "15a8f320-d71f-11e5-921f-a5d2a35a07d4",
@@ -322,6 +326,34 @@
       "guid": "fffec7b0-d724-11e5-921f-a5d2a35a07d4",
       "from_guid": "f489bc50-d724-11e5-921f-a5d2a35a07d4",
       "to_guid": "aa3f47a0-d71f-11e5-921f-a5d2a35a07d4",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "352871c0-e5c1-11e5-92d7-a73c171f12aa",
+      "from_guid": "0ba8d480-d71f-11e5-921f-a5d2a35a07d4",
+      "to_guid": "3527fc90-e5c1-11e5-92d7-a73c171f12aa",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "38c2af80-e5c1-11e5-92d7-a73c171f12aa",
+      "from_guid": "3527fc90-e5c1-11e5-92d7-a73c171f12aa",
+      "to_guid": "38c28870-e5c1-11e5-92d7-a73c171f12aa",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "3a112880-e5c1-11e5-92d7-a73c171f12aa",
+      "from_guid": "38c28870-e5c1-11e5-92d7-a73c171f12aa",
+      "to_guid": "15a8f320-d71f-11e5-921f-a5d2a35a07d4",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "42324df0-e5c1-11e5-92d7-a73c171f12aa",
+      "from_guid": "3527fc90-e5c1-11e5-92d7-a73c171f12aa",
+      "to_guid": "0ba8d480-d71f-11e5-921f-a5d2a35a07d4",
       "type": "regular",
       "curvature": 0
     }

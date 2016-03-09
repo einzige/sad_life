@@ -22,5 +22,13 @@ module Petri
     def reset_transitions
       reset_arcs.map(&:from_node)
     end
+
+    def links
+      if finish?
+        @net.places.select { |place| place.start? && place.identifier == identifier }
+      else
+        []
+      end
+    end
   end
 end

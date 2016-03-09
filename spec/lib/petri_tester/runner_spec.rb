@@ -7,6 +7,7 @@ describe PetriTester::Runner do
       let(:human) { Human.create }
 
       before do
+        subject.init
         subject.on('Finish school') { human.finish_school! }
       end
 
@@ -50,11 +51,13 @@ describe PetriTester::Runner do
 
       before { subject.execute!('1') }
 
-      focus
       it 'enables second flow' do
         subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(passed passed started)
         subject.execute!('2')
         subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finished passed started)
+
+        error = assert_raises(ArgumentError) { subject.execute!('3') }
+        error.message.must_match /'3' is not enabled/i
       end
     end
 
@@ -97,7 +100,7 @@ describe PetriTester::Runner do
         end
       end
 
-      let(:result_data) { subject.tokens.first.data }
+      let(:result_data) { subject.tokens_at('sum').first.data }
 
       it 'produces tokens with filled in data' do
         subject.execute!('Sum')
@@ -106,14 +109,12 @@ describe PetriTester::Runner do
 
       it 'works with conditionals returning false' do
         subject.execute!('<')
-        subject.tokens.count.must_equal 1
-        subject.tokens.first.place.identifier.must_equal 'sum'
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(start sum)
       end
 
       it 'works with conditionals returning true' do
         subject.execute!('>=')
-        subject.tokens.count.must_equal 1
-        subject.tokens.first.place.identifier.must_equal 'finish'
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finish start)
       end
     end
   end

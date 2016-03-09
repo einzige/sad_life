@@ -54,7 +54,11 @@ module Petri
 
     # @return [Place]
     def start_place
-      start_places = @places.select(&:start?)
+      start_places = @places.select(&:start?).select do |place|
+        connected = places_by_identifier(place.identifier)
+        connected.one? || connected.empty?
+      end
+
       raise ArgumentError, 'There are more than one start places' if start_places.many?
       raise ArgumentError, 'There is no start place' if start_places.empty?
 
@@ -84,6 +88,13 @@ module Petri
       @places.each { |node| return node if node.guid == guid }
       @transitions.each { |node| return node if node.guid == guid }
       nil
+    end
+
+    # @param identifier [String]
+    # @return [Array<Place>]
+    def places_by_identifier(identifier)
+      identifier = identifier.to_s
+      @places.select { |node| node.identifier == identifier }
     end
   end
 end
