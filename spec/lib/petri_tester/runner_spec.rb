@@ -41,7 +41,20 @@ describe PetriTester::Runner do
 
       it 'moves tokens automatically' do
         subject.tokens.count.must_equal 1
-        subject.tokens.first.place.identifier.must_equal net.node_by_identifier('finish').identifier
+        subject.tokens.first.place.identifier.must_equal 'finish'
+      end
+    end
+
+    describe 'multiple flows' do
+      let(:net) { load_net('multiple_flows') }
+
+      before { subject.execute!('1') }
+
+      focus
+      it 'enables second flow' do
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(passed passed started)
+        subject.execute!('2')
+        subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finished passed started)
       end
     end
 

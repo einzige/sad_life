@@ -9,6 +9,10 @@ module Petri
       !!@data[:start]
     end
 
+    def finish?
+      !!@data[:finish]
+    end
+
     # @return [Array<Arc>]
     def reset_arcs
       net.arcs.select { |arc| arc.to_node == self && arc.reset? }

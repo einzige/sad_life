@@ -44,7 +44,7 @@ module PetriTester
         end
       end
 
-      execute_automated!
+      execute_automated!(source: target_transition)
     end
 
     # @param transition [Petri::Transition]
@@ -61,6 +61,14 @@ module PetriTester
     def put_token(place, source: nil)
       Petri::Token.new(place, source).tap do |token|
         @tokens << token
+
+        if place.finish?
+          links = @net.places.select { |p| p.start? && p.identifier == place.identifier }
+
+          links.each do |place|
+            @tokens << Petri::Token.new(place)
+          end
+        end
       end
     end
 
@@ -100,9 +108,7 @@ module PetriTester
       return if @initialized
 
       # Fill start places with tokens to let the process start
-      @net.places.each do |place|
-        put_token(place) if place.start?
-      end
+      start_places.each(&method(:put_token))
 
       # Without weights assigned transition execution path search won't work
       PetriTester::DistanceWeightIndexator.new(@net).reindex
@@ -115,9 +121,10 @@ module PetriTester
     private
 
     # Runs all automated transitions which are enabled at the moment
-    def execute_automated!
+    # @param source [Petri::Transition]
+    def execute_automated!(source: nil)
       @net.transitions.each do |transition|
-        if transition_enabled?(transition) && transition.automated?
+        if transition_enabled?(transition) && transition.automated? && source != transition
           perform_action!(transition)
         end
       end
@@ -145,6 +152,23 @@ module PetriTester
     # @return [Transition]
     def transition_by_identifier!(identifier)
       @net.node_by_identifier(identifier) or raise ArgumentError, "No such transition '#{identifier}'"
+    end
+
+    # @param identifier [String]
+    # @return [Array<Petri::Place>]
+    def places_by_identifier(identifier)
+      identifier = identifier.to_s
+      @net.places.select { |node| node.identifier == identifier }
+    end
+
+    # @return [Array<Petri::Place>]
+    def start_places
+      @net.places.select do |place|
+        if place.start?
+          connected = places_by_identifier(place.identifier)
+          connected.one? || connected.empty?
+        end
+      end
     end
   end
 end
