@@ -3,6 +3,7 @@ development: &common
   autoload_paths:
     - app/models
     - lib
+    - app/bootstrap
   default_timezone: 'Pacific Time (US & Canada)'
 
 test:
