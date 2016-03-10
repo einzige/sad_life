@@ -371,7 +371,9 @@
       "from_guid": "0ba8d480-d71f-11e5-921f-a5d2a35a07d4",
       "to_guid": "15a8f320-d71f-11e5-921f-a5d2a35a07d4",
       "type": "regular",
-      "curvature": 0
+      "curvature": "0",
+      "guard": "",
+      "timer_rule": ""
     }
   ]
 }

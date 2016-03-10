@@ -1,15 +1,6 @@
 describe PetriTester::Runner do
   subject { PetriTester::Runner.new(net) }
 
-  describe 'shit' do
-    let(:net) { load_net('x') }
-
-    it 'rocks' do
-      subject.init
-      subject.execute!('Create profile')
-    end
-  end
-
   describe '#execute' do
     describe 'reachable transition' do
       let(:net) { load_net('reproduction') }
@@ -126,6 +117,15 @@ describe PetriTester::Runner do
       it 'works with conditionals returning true' do
         subject.execute!('>=')
         subject.tokens.map(&:place).map(&:identifier).sort.must_equal %w(finish)
+      end
+    end
+
+    describe 'big user flow' do
+      let(:net) { load_net('user') }
+
+      it 'works' do
+        subject.init
+        subject.execute!('Create profile')
       end
     end
   end
