@@ -3,7 +3,6 @@ class User
   attr_reader :profile
 
   def create_profile
-    raise ArgumentError unless can_create_profile?
     @profile = Profile.new(self)
   end
 
@@ -22,6 +21,10 @@ class User
 
   def account_active?
     !flow.terminated?('account active')
+  end
+
+  def can_upload_document?
+    flow.transition_enabled?('Upload document')
   end
 
   def can_create_profile?

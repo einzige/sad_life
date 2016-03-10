@@ -54,6 +54,14 @@ module PetriTester
     def transition_enabled?(transition)
       return false unless @initialized
 
+      case transition
+      when String
+        transition = transition_by_identifier!(transition)
+      when Petri::Transition
+      else
+        raise ArgumentError
+      end
+
       has_input_tokens = transition.input_places.all? do |place|
         @tokens.any? { |token| token.place == place }
       end
