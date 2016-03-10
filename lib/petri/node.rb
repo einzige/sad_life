@@ -25,5 +25,15 @@ module Petri
     def output_nodes
       output_arcs.map(&:to_node)
     end
+
+    # @return [Array<Arc>]
+    def outgoing_arcs
+      net.arcs.select { |arc| arc.from_node == self }
+    end
+
+    # @return [Array<Arc>]
+    def ingoing_arcs
+      net.arcs.select { |arc| arc.to_node == self }
+    end
   end
 end

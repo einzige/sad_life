@@ -39,6 +39,14 @@ module PetriTester
       transition.output_places
     end
 
+    def outgoing_arcs
+      transition.outgoing_arcs
+    end
+
+    def ingoing_arcs
+      transition.ingoing_arcs
+    end
+
     private
 
     # Executes reset arc logic on fire

@@ -1,6 +1,11 @@
 class User
 
   attr_reader :profile
+  attr_accessor :documents_count
+
+  def initialize
+    @documents_count = 0
+  end
 
   def create_profile
     @profile = Profile.new(self)

@@ -252,21 +252,21 @@
     {
       "guid": "4c639970-e105-11e5-93a9-2966c9b4b53a",
       "identifier": "Delete document",
-      "x": 505,
-      "y": 1578
+      "x": 504,
+      "y": 1581
     },
     {
       "guid": "50002120-e105-11e5-93a9-2966c9b4b53a",
-      "identifier": "= 4",
-      "x": 70,
+      "identifier": "<=",
+      "x": 116,
       "y": 1579,
       "automated": true
     },
     {
       "guid": "62d5c110-e105-11e5-93a9-2966c9b4b53a",
-      "identifier": ">= 5",
-      "x": 68,
-      "y": 1524,
+      "identifier": ">=",
+      "x": 114,
+      "y": 1537,
       "automated": true
     },
     {
@@ -601,7 +601,7 @@
       "from_guid": "4c639970-e105-11e5-93a9-2966c9b4b53a",
       "to_guid": "4e77d370-e105-11e5-93a9-2966c9b4b53a",
       "type": "regular",
-      "curvature": 0,
+      "curvature": "0",
       "production_rule": ""
     },
     {
@@ -610,14 +610,7 @@
       "to_guid": "50002120-e105-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": 0,
-      "guard": "uploasd count"
-    },
-    {
-      "guid": "521bfc40-e105-11e5-93a9-2966c9b4b53a",
-      "from_guid": "50002120-e105-11e5-93a9-2966c9b4b53a",
-      "to_guid": "1013b040-e105-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
+      "guard": "uploads_count"
     },
     {
       "guid": "74db8de0-e105-11e5-93a9-2966c9b4b53a",
@@ -649,14 +642,15 @@
       "to_guid": "62d5c110-e105-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": 0,
-      "guard": "uploads count"
+      "guard": "uploads_count"
     },
     {
       "guid": "8c08a110-e105-11e5-93a9-2966c9b4b53a",
       "from_guid": "62d5c110-e105-11e5-93a9-2966c9b4b53a",
       "to_guid": "1013b040-e105-11e5-93a9-2966c9b4b53a",
       "type": "reset",
-      "curvature": 0
+      "curvature": 0,
+      "production_rule": "5"
     },
     {
       "guid": "9e420100-e105-11e5-93a9-2966c9b4b53a",
@@ -1203,6 +1197,21 @@
       "to_guid": "4059fcf0-e5ec-11e5-abec-fd3990b9b9fc",
       "type": "regular",
       "curvature": 0
+    },
+    {
+      "guid": "af209360-e6cd-11e5-9cc0-1db24b0a7261",
+      "from_guid": "4c639970-e105-11e5-93a9-2966c9b4b53a",
+      "to_guid": "1013b040-e105-11e5-93a9-2966c9b4b53a",
+      "type": "reset",
+      "curvature": 168.41478558627097
+    },
+    {
+      "guid": "c3982380-e6cd-11e5-9cc0-1db24b0a7261",
+      "from_guid": "50002120-e105-11e5-93a9-2966c9b4b53a",
+      "to_guid": "1013b040-e105-11e5-93a9-2966c9b4b53a",
+      "type": "regular",
+      "curvature": 0,
+      "production_rule": "4"
     }
   ]
 }

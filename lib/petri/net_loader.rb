@@ -22,10 +22,10 @@ module Petri
     # @param to_guid [String]
     # @param type [String]
     # @param production_rule [String, nil]
-    def add_arc(guid: , from_guid: , to_guid: , type: , production_rule: nil)
+    def add_arc(guid: , from_guid: , to_guid: , type: , production_rule: nil, guard: nil)
       from_node = node_by_guid(from_guid)
       to_node = node_by_guid(to_guid)
-      @arcs << Arc.new(self, from: from_node, to: to_node, type: type.try(:to_sym), guid: guid, production_rule: production_rule)
+      @arcs << Arc.new(self, from: from_node, to: to_node, type: type.try(:to_sym), guid: guid, production_rule: production_rule, guard: guard)
     end
 
     module ClassMethods
@@ -70,7 +70,8 @@ module Petri
                         from_guid: data['from_guid'],
                         to_guid: data['to_guid'],
                         type: data['type'],
-                        production_rule: data['production_rule'])
+                        production_rule: data['production_rule'],
+                        guard: data['guard'])
           end
         end
       end
