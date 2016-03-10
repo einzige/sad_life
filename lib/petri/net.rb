@@ -25,12 +25,26 @@ module Petri
     end
 
     # @param identifier [String]
-    # @return [Node, nil]
-    def node_by_identifier(identifier)
+    # @return [Place, nil]
+    def place_by_identifier(identifier)
       identifier = identifier.to_s
       @places.each { |node| return node if node.identifier == identifier }
-      @transitions.each { |node| return node if node.identifier == identifier }
       nil
+    end
+
+    # @param identifier [String]
+    # @return [Transition, nil]
+    def transition_by_identifier(identifier)
+      identifier = identifier.to_s
+      @transitions.each { |node| return node if node.identifier == identifier }
+      identifier = identifier.to_s
+      nil
+    end
+
+    # @param identifier [String]
+    # @return [Node, nil]
+    def node_by_identifier(identifier)
+      place_by_identifier(identifier) || transition_by_identifier(identifier)
     end
 
     def [](key)

@@ -65,6 +65,29 @@ module PetriTester
       has_input_tokens && has_termination_tokens
     end
 
+    # @param place_identifier [String, Place]
+    # @return [true, false]
+    def has_token_at?(place_identifier)
+      case place_identifier
+      when Petri::Place
+        place = place_identifier
+      when String, Symbol
+        place = place_by_identifier!(place_identifier)
+      else
+        raise ArgumentErrror
+      end
+
+      @tokens.any? { |token| token.place == place }
+    end
+
+    # @param place_identifier [String]
+    def terminated?(place_identifier)
+      place = places_by_identifier(place_identifier).select(&:finish?).first
+      place or raise ArgumentError, "No such terminator: #{place_identifier}"
+
+      !has_token_at?(place)
+    end
+
     # @param place [Place]
     # @param source [Transition, nil]
     # @return [Token]
@@ -205,6 +228,10 @@ module PetriTester
     # @return [Transition]
     def transition_by_identifier!(identifier)
       @net.node_by_identifier(identifier) or raise ArgumentError, "No such transition '#{identifier}'"
+    end
+
+    def place_by_identifier!(identifier)
+      @net.place_by_identifier(identifier) or raise ArgumentError, "No such transition '#{identifier}'"
     end
 
     # @param identifier [String]
