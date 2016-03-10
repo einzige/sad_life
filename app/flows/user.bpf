@@ -213,15 +213,15 @@
     {
       "guid": "275dc8b0-e102-11e5-93a9-2966c9b4b53a",
       "identifier": ">= 15",
-      "x": 31,
-      "y": 2437,
+      "x": 81,
+      "y": 2439,
       "automated": true
     },
     {
       "guid": "da14ab40-e102-11e5-93a9-2966c9b4b53a",
       "identifier": "= 14",
-      "x": 32,
-      "y": 2483,
+      "x": 82,
+      "y": 2485,
       "automated": true
     },
     {
@@ -1223,7 +1223,8 @@
       "from_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
       "to_guid": "ece1e4c0-e389-11e5-952a-e368b98b57b7",
       "type": "regular",
-      "curvature": 0
+      "curvature": 0,
+      "guard": "post_id"
     },
     {
       "guid": "30c16940-e6e1-11e5-9cc0-1db24b0a7261",
@@ -1250,6 +1251,20 @@
       "guid": "352ab6d0-e6e1-11e5-9cc0-1db24b0a7261",
       "from_guid": "394ac840-e100-11e5-93a9-2966c9b4b53a",
       "to_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "e9cd18e0-e6e5-11e5-9cc0-1db24b0a7261",
+      "from_guid": "afaae3d0-e100-11e5-93a9-2966c9b4b53a",
+      "to_guid": "75559220-e100-11e5-93a9-2966c9b4b53a",
+      "type": "reset",
+      "curvature": 192.8315615000571
+    },
+    {
+      "guid": "f96ede00-e6e5-11e5-9cc0-1db24b0a7261",
+      "from_guid": "394ac840-e100-11e5-93a9-2966c9b4b53a",
+      "to_guid": "3778a050-e100-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": 0
     }

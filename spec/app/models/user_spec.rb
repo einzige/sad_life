@@ -130,5 +130,9 @@ describe User do
     subject.flow.execute!('Update post')
     subject.post_updated.must_equal true
     subject.flow.transition_enabled?('Update post').must_equal true
+    subject.flow.execute!('Lock')
+    subject.flow.transition_enabled?('Update post').must_equal false
+    subject.flow.execute!('Unlock')
+    subject.flow.transition_enabled?('Update post').must_equal true
   end
 end
