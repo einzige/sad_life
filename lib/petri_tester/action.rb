@@ -73,13 +73,9 @@ module PetriTester
 
     def produce_tokens!
       output_places.each do |place|
-        produced_tokens << kase.put_token(place, source: transition)
-
-        if production_callback
-          produced_tokens.each do |token|
-            production_callback.call(token, self)
-          end
-        end
+        token = kase.put_token(place, source: transition)
+        production_callback.call(token, self) if production_callback
+        produced_tokens << token
       end
     end
 

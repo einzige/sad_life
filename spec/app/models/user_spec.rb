@@ -25,13 +25,15 @@ describe User do
     upload_document = UploadDocument.new(subject)
     delete_document = DeleteDocument.new(subject)
     create_document_post = CreateDocumentPost.new(subject)
+    update_post = UpdatePost.new(subject)
 
-    subject.flow.on('Upload document') { upload_document.perform }
+    subject.flow.on('Upload document') { |action| upload_document.perform!(action) }
     subject.flow.produce('Upload document') { |token| upload_document.produce(token) }
-    subject.flow.on('Delete document') { delete_document.perform }
+    subject.flow.on('Delete document') { |action| delete_document.perform!(action) }
     subject.flow.produce('Delete document') { |token| delete_document.produce(token) }
-    subject.flow.on('Create document post') { create_document_post.perform }
-    subject.flow.produce('Create document post') { |token| create_document_post.produce(token) }
+    subject.flow.on('Create document post') { |action| create_document_post.perform!(action) }
+    subject.flow.produce('Create document post') { |token, action| create_document_post.produce(token) }
+    subject.flow.on('Update post') { |action| update_post.perform!(action) }
 
     subject.flow.on('<=') do |action|
       outgoing_arc = action.outgoing_arcs.first or raise 'Needs an output'
@@ -123,5 +125,10 @@ describe User do
     subject.flow.transition_enabled?('Upload document').must_equal true
     subject.flow.transition_enabled?('Delete document').must_equal false
     subject.flow.transition_enabled?('Create document post').must_equal false
+    subject.flow.transition_enabled?('Update post').must_equal true
+
+    subject.flow.execute!('Update post')
+    subject.post_updated.must_equal true
+    subject.flow.transition_enabled?('Update post').must_equal true
   end
 end

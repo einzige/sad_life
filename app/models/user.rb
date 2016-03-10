@@ -1,7 +1,7 @@
 class User
 
   attr_reader :profile
-  attr_accessor :documents_count
+  attr_accessor :documents_count, :post_updated
 
   def initialize
     @documents_count = 0

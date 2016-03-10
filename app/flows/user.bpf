@@ -171,6 +171,11 @@
       "identifier": "subscription cancelled",
       "x": 778,
       "y": 1266
+    },
+    {
+      "guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "x": 1119,
+      "y": 2068
     }
   ],
   "transitions": [
@@ -290,22 +295,22 @@
     {
       "guid": "44bc6980-e106-11e5-93a9-2966c9b4b53a",
       "identifier": "= 9",
-      "x": 60,
+      "x": 90,
       "y": 1902,
       "automated": true
     },
     {
       "guid": "4822ed10-e106-11e5-93a9-2966c9b4b53a",
       "identifier": ">= 10",
-      "x": 59,
+      "x": 89,
       "y": 1849,
       "automated": true
     },
     {
       "guid": "31578ed0-e13b-11e5-8f0f-7fb84f6a60ef",
       "identifier": "Delete post",
-      "x": 1335,
-      "y": 2167
+      "x": 1337,
+      "y": 2267
     },
     {
       "guid": "d2c1d7c0-e2c2-11e5-bafe-c7b38310be4a",
@@ -354,14 +359,14 @@
     {
       "guid": "b8538af0-e380-11e5-952a-e368b98b57b7",
       "identifier": "Update post",
-      "x": 1337,
-      "y": 2040
+      "x": 1336,
+      "y": 2104
     },
     {
       "guid": "ece1e4c0-e389-11e5-952a-e368b98b57b7",
-      "identifier": "Notify subscribers",
-      "x": 1198,
-      "y": 1945,
+      "identifier": "Notify new post",
+      "x": 1306,
+      "y": 1959,
       "automated": true
     },
     {
@@ -885,15 +890,16 @@
       "from_guid": "b8538af0-e380-11e5-952a-e368b98b57b7",
       "to_guid": "15edc480-e108-11e5-93a9-2966c9b4b53a",
       "type": "regular",
-      "curvature": 0,
-      "production_rule": "post_id"
+      "curvature": -19.626792204627804,
+      "production_rule": ""
     },
     {
       "guid": "d81d8340-e380-11e5-952a-e368b98b57b7",
       "from_guid": "15edc480-e108-11e5-93a9-2966c9b4b53a",
       "to_guid": "b8538af0-e380-11e5-952a-e368b98b57b7",
       "type": "regular",
-      "curvature": 0
+      "curvature": 0,
+      "guard": "post_id"
     },
     {
       "guid": "d92b22b0-e380-11e5-952a-e368b98b57b7",
@@ -902,21 +908,6 @@
       "type": "regular",
       "curvature": 0,
       "guard": "post_id"
-    },
-    {
-      "guid": "ece259f0-e389-11e5-952a-e368b98b57b7",
-      "from_guid": "15edc480-e108-11e5-93a9-2966c9b4b53a",
-      "to_guid": "ece1e4c0-e389-11e5-952a-e368b98b57b7",
-      "type": "regular",
-      "curvature": 0,
-      "guard": "post_id"
-    },
-    {
-      "guid": "03b3dfa0-e38a-11e5-952a-e368b98b57b7",
-      "from_guid": "ece1e4c0-e389-11e5-952a-e368b98b57b7",
-      "to_guid": "15edc480-e108-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
     },
     {
       "guid": "35b996f1-e38c-11e5-952a-e368b98b57b7",
@@ -1212,6 +1203,55 @@
       "type": "regular",
       "curvature": 0,
       "production_rule": "4"
+    },
+    {
+      "guid": "012eab90-e6d0-11e5-9cc0-1db24b0a7261",
+      "from_guid": "419e1280-e106-11e5-93a9-2966c9b4b53a",
+      "to_guid": "356edee0-e106-11e5-93a9-2966c9b4b53a",
+      "type": "reset",
+      "curvature": 209.43339962780632
+    },
+    {
+      "guid": "1046e5a0-e6e1-11e5-9cc0-1db24b0a7261",
+      "from_guid": "49336820-e105-11e5-93a9-2966c9b4b53a",
+      "to_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "11cb62c0-e6e1-11e5-9cc0-1db24b0a7261",
+      "from_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "to_guid": "ece1e4c0-e389-11e5-952a-e368b98b57b7",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "30c16940-e6e1-11e5-9cc0-1db24b0a7261",
+      "from_guid": "401a7fc0-e106-11e5-93a9-2966c9b4b53a",
+      "to_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "3208dd60-e6e1-11e5-9cc0-1db24b0a7261",
+      "from_guid": "32b4b2d0-e104-11e5-93a9-2966c9b4b53a",
+      "to_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "339b6440-e6e1-11e5-9cc0-1db24b0a7261",
+      "from_guid": "84a8c210-e100-11e5-93a9-2966c9b4b53a",
+      "to_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "352ab6d0-e6e1-11e5-9cc0-1db24b0a7261",
+      "from_guid": "394ac840-e100-11e5-93a9-2966c9b4b53a",
+      "to_guid": "10469780-e6e1-11e5-9cc0-1db24b0a7261",
+      "type": "regular",
+      "curvature": 0
     }
   ]
 }

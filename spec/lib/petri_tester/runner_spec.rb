@@ -68,11 +68,11 @@ describe PetriTester::Runner do
 
       before do
         subject.produce('Number') do |token|
-          token.data['number'] = token.production_rule.to_i
+          token['number'] = token.production_rule.to_i
         end
 
         subject.produce('Sum') do |token, action|
-          token.data['number'] = action.consumed_tokens.sum { |t| t.data['number'].to_i }
+          token['number'] = action.consumed_tokens.sum { |t| t.data['number'].to_i }
         end
 
         subject.on('<') do |action|
@@ -84,7 +84,7 @@ describe PetriTester::Runner do
           number = output_arc.production_rule.to_i
 
           action.consumed_tokens.all? do |token|
-            token.data['number'] < number
+            token['number'] < number
           end
         end
 
@@ -97,7 +97,7 @@ describe PetriTester::Runner do
           number = output_arc.production_rule.to_i
 
           action.consumed_tokens.all? do |token|
-            token.data['number'] >= number
+            token['number'] >= number
           end
         end
       end
