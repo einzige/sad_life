@@ -69,8 +69,10 @@ module PetriTester
         end
       end.compact
 
-      transitions.each do |transition|
-        find_enabling_transitions(transition, transitions_in_path, index: index + 1)
+      transitions.each do |t|
+        if transition != t
+          find_enabling_transitions(t, transitions_in_path, index: index + 1)
+        end
       end
     end
   end

@@ -2,14 +2,14 @@
   "places": [
     {
       "guid": "507f8f30-dfe5-11e5-95e7-c91fb6748d51",
-      "identifier": "",
-      "x": 283,
-      "y": 218,
+      "identifier": "start",
+      "x": 382,
+      "y": 254,
       "start": true
     },
     {
       "guid": "507fb640-dfe5-11e5-95e7-c91fb6748d51",
-      "identifier": "",
+      "identifier": "sum",
       "x": 988,
       "y": 266,
       "start": false,
@@ -24,7 +24,7 @@
     {
       "guid": "8c41de60-dfe5-11e5-95e7-c91fb6748d51",
       "identifier": "one",
-      "x": 710,
+      "x": 714,
       "y": 99
     },
     {
@@ -40,16 +40,6 @@
       "y": 319,
       "start": false,
       "finish": true
-    },
-    {
-      "guid": "0e2ad790-e0fb-11e5-93a9-2966c9b4b53a",
-      "x": 424,
-      "y": 133
-    },
-    {
-      "guid": "0f149b50-e0fb-11e5-93a9-2966c9b4b53a",
-      "x": 426,
-      "y": 276
     }
   ],
   "transitions": [
@@ -62,7 +52,7 @@
     },
     {
       "guid": "50dea3a0-e0ec-11e5-93a9-2966c9b4b53a",
-      "identifier": "< 3",
+      "identifier": "<",
       "x": 1158,
       "y": 236,
       "action": ""
@@ -75,33 +65,16 @@
     },
     {
       "guid": "7618d230-e0ec-11e5-93a9-2966c9b4b53a",
-      "identifier": ">= 3",
+      "identifier": ">=",
       "x": 1160,
       "y": 303,
       "automated": false
     },
     {
-      "guid": "3b755f80-e0f7-11e5-93a9-2966c9b4b53a",
-      "identifier": "2",
-      "x": 497,
-      "y": 330
-    },
-    {
-      "guid": "59548ce0-e0f9-11e5-93a9-2966c9b4b53a",
-      "x": -10000,
-      "y": -10000
-    },
-    {
       "guid": "f4e7b5a0-e0fa-11e5-93a9-2966c9b4b53a",
-      "identifier": "1",
-      "x": 496,
-      "y": 44
-    },
-    {
-      "guid": "09d957c0-e0fb-11e5-93a9-2966c9b4b53a",
-      "x": 349,
-      "y": 196,
-      "automated": true
+      "identifier": "Number",
+      "x": 526,
+      "y": 243
     }
   ],
   "arcs": [
@@ -145,7 +118,7 @@
       "to_guid": "5bf31870-e0ec-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": -0.008620369344118584,
-      "production_rule": ""
+      "production_rule": "3"
     },
     {
       "guid": "61231160-e0ec-11e5-93a9-2966c9b4b53a",
@@ -168,15 +141,7 @@
       "to_guid": "8b128aa0-e0ec-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": 0.025826786769593713,
-      "production_rule": ""
-    },
-    {
-      "guid": "416c7900-e0f7-11e5-93a9-2966c9b4b53a",
-      "from_guid": "3b755f80-e0f7-11e5-93a9-2966c9b4b53a",
-      "to_guid": "8301b460-dfe5-11e5-95e7-c91fb6748d51",
-      "type": "regular",
-      "curvature": 0,
-      "production_rule": "number"
+      "production_rule": "3"
     },
     {
       "guid": "fe37be20-e0fa-11e5-93a9-2966c9b4b53a",
@@ -184,39 +149,19 @@
       "to_guid": "8c41de60-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
       "curvature": 0,
-      "production_rule": "number"
+      "production_rule": "1"
     },
     {
-      "guid": "09d9ccf0-e0fb-11e5-93a9-2966c9b4b53a",
+      "guid": "2fdf7a60-e544-11e5-95ab-7d135fb4f255",
+      "from_guid": "f4e7b5a0-e0fa-11e5-93a9-2966c9b4b53a",
+      "to_guid": "8301b460-dfe5-11e5-95e7-c91fb6748d51",
+      "type": "regular",
+      "curvature": 0,
+      "production_rule": "2"
+    },
+    {
+      "guid": "b44cfc00-e5df-11e5-abec-fd3990b9b9fc",
       "from_guid": "507f8f30-dfe5-11e5-95e7-c91fb6748d51",
-      "to_guid": "09d957c0-e0fb-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": -1.0429254908064216
-    },
-    {
-      "guid": "0e2ad791-e0fb-11e5-93a9-2966c9b4b53a",
-      "from_guid": "09d957c0-e0fb-11e5-93a9-2966c9b4b53a",
-      "to_guid": "0e2ad790-e0fb-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "0f14c260-e0fb-11e5-93a9-2966c9b4b53a",
-      "from_guid": "09d957c0-e0fb-11e5-93a9-2966c9b4b53a",
-      "to_guid": "0f149b50-e0fb-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "0fcf5fd0-e0fb-11e5-93a9-2966c9b4b53a",
-      "from_guid": "0f149b50-e0fb-11e5-93a9-2966c9b4b53a",
-      "to_guid": "3b755f80-e0f7-11e5-93a9-2966c9b4b53a",
-      "type": "regular",
-      "curvature": 0
-    },
-    {
-      "guid": "10ca3a90-e0fb-11e5-93a9-2966c9b4b53a",
-      "from_guid": "0e2ad790-e0fb-11e5-93a9-2966c9b4b53a",
       "to_guid": "f4e7b5a0-e0fa-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": 0

@@ -1,8 +1,4 @@
 describe Petri::Net do
-  it 'works' do
-    Petri::Net.new
-  end
-
   describe '.from_string' do
     subject { load_net('from_place_to_transition') }
 
@@ -25,64 +21,6 @@ describe Petri::Net do
       arc.from_node.must_equal subject.places.first
       arc.to_node.must_equal subject.transitions.first
       arc.type.must_equal :regular
-    end
-  end
-
-  describe '#init' do
-    subject { load_net('from_place_to_transition') }
-
-    it 'fills start places with tokens' do
-      subject.tokens.count.must_equal 0
-      subject.transitions[0].enabled?.must_equal false
-
-      subject.init
-
-      subject.tokens.count.must_equal 1
-      subject.transitions[0].enabled?.must_equal true
-    end
-  end
-
-  describe '#put_token' do
-    subject { Petri::Net.new }
-    let(:place) { Petri::Place.new(subject) }
-
-    it 'adds a token' do
-      subject.tokens.count.must_equal 0
-      subject.put_token(place)
-      subject.tokens.count.must_equal 1
-      subject.tokens[0].class.must_equal Petri::Token
-      subject.tokens[0].place.must_equal place
-    end
-  end
-
-  describe '#remove_token' do
-    subject { Petri::Net.new }
-    let(:place) { Petri::Place.new(subject) }
-    let(:place_2) { Petri::Place.new(subject) }
-
-    it 'removes a token' do
-      subject.put_token(place)
-      subject.put_token(place_2)
-      subject.tokens.count.must_equal 2
-      subject.remove_token(place)
-      subject.tokens.count.must_equal 1
-      subject.tokens.first.place.must_equal place_2
-    end
-  end
-
-  describe '#reset_tokens' do
-    subject { Petri::Net.new }
-    let(:place) { Petri::Place.new(subject) }
-    let(:place_2) { Petri::Place.new(subject) }
-
-    it 'removes all tokens from a place' do
-      subject.put_token(place)
-      subject.put_token(place)
-      subject.put_token(place_2)
-      subject.tokens.count.must_equal 3
-      subject.reset_tokens(place)
-      subject.tokens.count.must_equal 1
-      subject.tokens.first.place.must_equal place_2
     end
   end
 
