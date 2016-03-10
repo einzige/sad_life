@@ -43,6 +43,8 @@ module Petri
 
     protected
 
+    # @param guid [String]
+    # @return [Node, nil]
     def node_by_guid(guid)
       @places.each { |node| return node if node.guid == guid }
       @transitions.each { |node| return node if node.guid == guid }

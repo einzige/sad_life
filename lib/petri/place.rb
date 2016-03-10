@@ -19,6 +19,9 @@ module Petri
       reset_arcs.map(&:from_node)
     end
 
+    # For a finish place returns start places with the same identifier.
+    # For nets where a finish place may be connected with start places
+    # in order to initialize one flow as a result of another.
     # @return [Array<Place>]
     def links
       if finish?

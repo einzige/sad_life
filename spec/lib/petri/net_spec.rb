@@ -1,8 +1,4 @@
 describe Petri::Net do
-  it 'works' do
-    Petri::Net.new
-  end
-
   describe '.from_string' do
     subject { load_net('from_place_to_transition') }
 
