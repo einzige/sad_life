@@ -8,32 +8,29 @@ describe PetriTester::Runner do
       before do
         subject.init
 
-        paint_in_black = proc { |token| token['color'] = 'black' }
-
-        subject.produce('Paint in black', &paint_in_black)
-        subject.produce('Autocolor', &paint_in_black)
-        subject.produce('Pick black color', &paint_in_black)
-
         subject.produce('Repaint in red') do |token|
           token['color'] = 'red'
         end
 
-        subject.on('Pick black color') do |action|
-          unless action.consumed_tokens.all? { |token| token['color'] == 'black' }
-            raise 'No black color passed!'
+        subject.on('Filter black color') do |action|
+          action.consumed_tokens.all? do |token|
+            token['color'] == 'black'
           end
+        end
 
-          true
+        subject.on('Pick black color') do |action|
+          action.consumed_tokens.all? do |token|
+            token['color'] == 'black'
+          end
         end
 
         subject.on('Pick green color') do
           raise 'Must never be green'
         end
-
-        subject.execute!('Paint in black')
       end
 
-      it 'works' do
+      it 'works with colors' do
+        subject.execute!('Paint', {'color' => 'black'})
         subject.transition_enabled?('Pick black color').must_equal true
         subject.transition_enabled?('Pick black color', color: {'color' => 'black'}).must_equal true
         subject.transition_enabled?('Pick black color', color: {'color' => 'red'}).must_equal false
@@ -44,6 +41,11 @@ describe PetriTester::Runner do
         subject.transition_enabled?('Pick black color').must_equal false
         subject.transition_enabled?('Pick black color', color: {'color' => 'black'}).must_equal false
         subject.transition_enabled?('Pick black color', color: {'color' => 'red'}).must_equal false
+      end
+
+      it 'passes params to token data' do
+        subject.execute!('Paint', {'color' => 'light gray'})
+        subject.transition_enabled?('Pick black color').must_equal false
       end
     end
   end

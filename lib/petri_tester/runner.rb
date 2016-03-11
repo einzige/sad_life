@@ -119,14 +119,17 @@ module PetriTester
     end
 
     # @param place [Place]
+    # @param color [Hash]
     # @return [Token, nil]
-    def remove_token(place)
+    def remove_token(place, color: {})
       @tokens.each do |token|
-        if token.place == place
+        if token.place == place &&
+             (color.blank? || (color.to_a - token.data.to_a).empty?)
+
           @tokens.delete(token)
 
           place.links.each do |link|
-            remove_token(link)
+            remove_token(link, color: color)
             link[:enabled] = false
           end
 

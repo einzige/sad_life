@@ -46,7 +46,7 @@
   "transitions": [
     {
       "guid": "79813120-e7a8-11e5-b275-ebb4cb359af5",
-      "identifier": "Paint in black",
+      "identifier": "Paint",
       "x": 288,
       "y": 270
     },
@@ -58,9 +58,9 @@
     },
     {
       "guid": "e0e64ee0-e7a8-11e5-b275-ebb4cb359af5",
-      "identifier": "Autocolor",
-      "x": 579,
-      "y": 178,
+      "identifier": "Filter black color",
+      "x": 544,
+      "y": 179,
       "automated": true
     },
     {

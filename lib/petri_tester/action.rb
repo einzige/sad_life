@@ -13,7 +13,7 @@ module PetriTester
       @transition = transition
       @consumed_tokens = []
       @produced_tokens = []
-      @params = {}
+      @params = params
     end
 
     # @return [true, false]
@@ -63,7 +63,7 @@ module PetriTester
 
     def consume_tokens!
       @consumed_tokens = transition.input_places.map do |place|
-        kase.remove_token(place).tap do |token|
+        kase.remove_token(place, color: color).tap do |token|
           token.data.merge!(params)
         end
       end.compact
@@ -79,6 +79,8 @@ module PetriTester
     def produce_tokens!
       output_places.each do |place|
         token = kase.put_token(place, source: transition)
+        token.data.merge!(color)
+        token.data.merge!(params)
         production_callback.call(token, self) if production_callback
         produced_tokens << token
       end
