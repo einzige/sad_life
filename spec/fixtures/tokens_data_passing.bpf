@@ -101,8 +101,8 @@
       "from_guid": "85107020-dfe5-11e5-95e7-c91fb6748d51",
       "to_guid": "507fb640-dfe5-11e5-95e7-c91fb6748d51",
       "type": "regular",
-      "curvature": 1.9523963054548459,
-      "production_rule": "sum"
+      "curvature": "0",
+      "production_rule": ""
     },
     {
       "guid": "50df3fe0-e0ec-11e5-93a9-2966c9b4b53a",
@@ -110,7 +110,7 @@
       "to_guid": "50dea3a0-e0ec-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": 47.03197143689838,
-      "guard": "sum"
+      "guard": "number"
     },
     {
       "guid": "5bf36690-e0ec-11e5-93a9-2966c9b4b53a",
@@ -133,7 +133,7 @@
       "to_guid": "7618d230-e0ec-11e5-93a9-2966c9b4b53a",
       "type": "regular",
       "curvature": -43.5576044470545,
-      "guard": "sum"
+      "guard": "number"
     },
     {
       "guid": "8b128aa1-e0ec-11e5-93a9-2966c9b4b53a",

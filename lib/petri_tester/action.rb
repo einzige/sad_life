@@ -63,8 +63,15 @@ module PetriTester
 
     def consume_tokens!
       @consumed_tokens = transition.input_places.map do |place|
+        arc = ingoing_arcs.detect { |arc| arc.from_node == place }
+
         kase.remove_token(place, color: color).tap do |token|
-          token.data.merge!(params)
+          if arc.guard.present?
+            unless token.data.key?(arc.guard)
+              kase.restore_token(token)
+              raise ArgumentError, "Color key '#{arc.guard}' is missing on '#{transition.identifier}' transition"
+            end
+          end
         end
       end.compact
     end
