@@ -1,12 +1,15 @@
 module PetriTester
   class Action
-    attr_reader :kase, :transition, :params
+    attr_reader :kase, :transition, :params, :color
     attr_reader :consumed_tokens, :produced_tokens
 
     # @param kase [PetriTester::Runner]
     # @param transition [Petri::Transition]
-    def initialize(kase, transition, params = {})
+    # @param params [Hash]
+    # @param color [Hash] Consuming token color
+    def initialize(kase, transition, params: {}, color: {})
       @kase = kase
+      @color = color
       @transition = transition
       @consumed_tokens = []
       @produced_tokens = []
@@ -15,7 +18,9 @@ module PetriTester
 
     # @return [true, false]
     def perform!(params = {})
-      raise ArgumentError, "Transition '#{transition.identifier}' is not enabled" unless kase.transition_enabled?(transition)
+      unless kase.transition_enabled?(transition, color: color)
+        raise ArgumentError, "Transition '#{transition.identifier}' is not enabled"
+      end
 
       consume_tokens!
 

@@ -30,19 +30,19 @@ module PetriTester
     end
 
     # @param transition_identifier [String]
-    def execute!(transition_identifier, params = {})
+    def execute!(transition_identifier, params = {}, color: {})
       init
       target_transition = transition_by_identifier!(transition_identifier)
 
-      if transition_enabled?(target_transition)
-        perform_action!(target_transition, params)
+      if transition_enabled?(target_transition, color: color)
+        perform_action!(target_transition, params: params, color: color)
       else
         PetriTester::ExecutionChain.new(target_transition).each do |level|
           level.each do |transition|
             if transition == target_transition
-              perform_action!(transition, params)
+              perform_action!(transition, params: params, color: color)
             else
-              perform_action(transition, params)
+              perform_action(transition, params: params, color: color)
             end
           end
         end
@@ -50,8 +50,9 @@ module PetriTester
     end
 
     # @param transition [Petri::Transition]
+    # @param color [Hash<String>]
     # @return [true, false]
-    def transition_enabled?(transition)
+    def transition_enabled?(transition, color: {})
       return false unless @initialized
 
       case transition
@@ -63,14 +64,17 @@ module PetriTester
       end
 
       has_input_tokens = transition.input_places.all? do |place|
-        @tokens.any? { |token| token.place == place }
+        @tokens.any? do |token|
+          (token.place == place) &&
+            (color.blank? || (color.to_a - token.data.to_a).empty?) # matched by color
+        end
       end
 
-      has_termination_tokens = @terminators[transition].all? do |termination_place|
+      not_terminated = @terminators[transition].all? do |termination_place|
         termination_place[:enabled]
       end
 
-      has_input_tokens && has_termination_tokens
+      has_input_tokens && not_terminated
     end
 
     # @param place_identifier [String, Place]
@@ -204,10 +208,14 @@ module PetriTester
 
     # Runs all automated transitions which are enabled at the moment
     # @param source [Petri::Transition]
-    def execute_automated!(source: nil)
+    # @param params [Hash]
+    # @param color [Hash] Consuming token color
+    def execute_automated!(source: nil, params: {}, color: {})
       @net.transitions.each do |transition|
-        if transition_enabled?(transition) && transition.automated? && source != transition
-          perform_action!(transition)
+        if transition.automated? &&
+             source != transition &&
+               transition_enabled?(transition, color: color)
+          perform_action!(transition, params: params, color: color)
         end
       end
     end
@@ -215,9 +223,11 @@ module PetriTester
     # Fires transition if enabled, executes binded block
     # @param transition [Petri::Transition]
     # @param params [Hash]
-    def perform_action(transition, *args)
-      if transition_enabled?(transition)
-        perform_action!(transition)
+    # @param color [Hash] Consuming token color
+    # @return [Action, nil]
+    def perform_action(transition, params: {}, color: {})
+      if transition_enabled?(transition, color: color)
+        perform_action!(transition, params: params, color: color)
       end
     end
 
@@ -225,9 +235,11 @@ module PetriTester
     # @raise
     # @param transition [Petri::Transition]
     # @param params [Hash]
-    def perform_action!(transition, params = {})
-      Action.new(self, transition, params).perform!.tap do
-        execute_automated!(source: transition)
+    # @param color [Hash] Consuming token color
+    # @return [Action]
+    def perform_action!(transition, params: {}, color: {})
+      Action.new(self, transition, params: params, color: color).perform!.tap do
+        execute_automated!(source: transition, params: params, color: color)
       end
     end
 

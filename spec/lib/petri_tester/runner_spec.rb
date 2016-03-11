@@ -1,6 +1,53 @@
 describe PetriTester::Runner do
   subject { PetriTester::Runner.new(net) }
 
+  describe '#transition_enabled?' do
+    describe 'enabled with no color' do
+      let(:net) { load_net('colors') }
+
+      before do
+        subject.init
+
+        paint_in_black = proc { |token| token['color'] = 'black' }
+
+        subject.produce('Paint in black', &paint_in_black)
+        subject.produce('Autocolor', &paint_in_black)
+        subject.produce('Pick black color', &paint_in_black)
+
+        subject.produce('Repaint in red') do |token|
+          token['color'] = 'red'
+        end
+
+        subject.on('Pick black color') do |action|
+          unless action.consumed_tokens.all? { |token| token['color'] == 'black' }
+            raise 'No black color passed!'
+          end
+
+          true
+        end
+
+        subject.on('Pick green color') do
+          raise 'Must never be green'
+        end
+
+        subject.execute!('Paint in black')
+      end
+
+      it 'works' do
+        subject.transition_enabled?('Pick black color').must_equal true
+        subject.transition_enabled?('Pick black color', color: {'color' => 'black'}).must_equal true
+        subject.transition_enabled?('Pick black color', color: {'color' => 'red'}).must_equal false
+        subject.transition_enabled?('Pick green color', color: {'color' => 'black'}).must_equal false
+        subject.transition_enabled?('Pick green color', color: {'color' => 'green'}).must_equal false
+        subject.transition_enabled?('Pick green color', color: {'color' => 'red'}).must_equal true
+        subject.execute!('Pick black color', {}, color: {'color' => 'black'})
+        subject.transition_enabled?('Pick black color').must_equal false
+        subject.transition_enabled?('Pick black color', color: {'color' => 'black'}).must_equal false
+        subject.transition_enabled?('Pick black color', color: {'color' => 'red'}).must_equal false
+      end
+    end
+  end
+
   describe '#execute' do
     describe 'reachable transition' do
       let(:net) { load_net('reproduction') }
