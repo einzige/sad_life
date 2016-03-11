@@ -1,6 +1,55 @@
 describe PetriTester::Runner do
   subject { PetriTester::Runner.new(net) }
 
+  describe '#transition_enabled?' do
+    describe 'enabled with no color' do
+      let(:net) { load_net('colors') }
+
+      before do
+        subject.init
+
+        subject.produce('Repaint in red') do |token|
+          token['color'] = 'red'
+        end
+
+        subject.on('Filter black color') do |action|
+          action.consumed_tokens.all? do |token|
+            token['color'] == 'black'
+          end
+        end
+
+        subject.on('Pick black color') do |action|
+          action.consumed_tokens.all? do |token|
+            token['color'] == 'black'
+          end
+        end
+
+        subject.on('Pick green color') do
+          raise 'Must never be green'
+        end
+      end
+
+      it 'works with colors' do
+        subject.execute!('Paint', {'color' => 'black'})
+        subject.transition_enabled?('Pick black color').must_equal true
+        subject.transition_enabled?('Pick black color', color: {'color' => 'black'}).must_equal true
+        subject.transition_enabled?('Pick black color', color: {'color' => 'red'}).must_equal false
+        subject.transition_enabled?('Pick green color', color: {'color' => 'black'}).must_equal false
+        subject.transition_enabled?('Pick green color', color: {'color' => 'green'}).must_equal false
+        subject.transition_enabled?('Pick green color', color: {'color' => 'red'}).must_equal true
+        subject.execute!('Pick black color', {}, color: {'color' => 'black'})
+        subject.transition_enabled?('Pick black color').must_equal false
+        subject.transition_enabled?('Pick black color', color: {'color' => 'black'}).must_equal false
+        subject.transition_enabled?('Pick black color', color: {'color' => 'red'}).must_equal false
+      end
+
+      it 'passes params to token data' do
+        subject.execute!('Paint', {'color' => 'light gray'})
+        subject.transition_enabled?('Pick black color').must_equal false
+      end
+    end
+  end
+
   describe '#execute' do
     describe 'reachable transition' do
       let(:net) { load_net('reproduction') }
@@ -68,11 +117,11 @@ describe PetriTester::Runner do
 
       before do
         subject.produce('Number') do |token|
-          token.data['number'] = token.production_rule.to_i
+          token['number'] = token.production_rule.to_i
         end
 
         subject.produce('Sum') do |token, action|
-          token.data['number'] = action.consumed_tokens.sum { |t| t.data['number'].to_i }
+          token['number'] = action.consumed_tokens.sum { |t| t.data['number'].to_i }
         end
 
         subject.on('<') do |action|
@@ -84,7 +133,7 @@ describe PetriTester::Runner do
           number = output_arc.production_rule.to_i
 
           action.consumed_tokens.all? do |token|
-            token.data['number'] < number
+            token['number'] < number
           end
         end
 
@@ -97,7 +146,7 @@ describe PetriTester::Runner do
           number = output_arc.production_rule.to_i
 
           action.consumed_tokens.all? do |token|
-            token.data['number'] >= number
+            token['number'] >= number
           end
         end
       end

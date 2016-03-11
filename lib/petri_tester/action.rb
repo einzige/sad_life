@@ -1,21 +1,26 @@
 module PetriTester
   class Action
-    attr_reader :kase, :transition, :params
+    attr_reader :kase, :transition, :params, :color
     attr_reader :consumed_tokens, :produced_tokens
 
     # @param kase [PetriTester::Runner]
     # @param transition [Petri::Transition]
-    def initialize(kase, transition, params = {})
+    # @param params [Hash]
+    # @param color [Hash] Consuming token color
+    def initialize(kase, transition, params: {}, color: {})
       @kase = kase
+      @color = color
       @transition = transition
       @consumed_tokens = []
       @produced_tokens = []
-      @params = {}
+      @params = params
     end
 
     # @return [true, false]
     def perform!(params = {})
-      raise ArgumentError, "Transition '#{transition.identifier}' is not enabled" unless kase.transition_enabled?(transition)
+      unless kase.transition_enabled?(transition, color: color)
+        raise ArgumentError, "Transition '#{transition.identifier}' is not enabled"
+      end
 
       consume_tokens!
 
@@ -39,6 +44,14 @@ module PetriTester
       transition.output_places
     end
 
+    def outgoing_arcs
+      transition.outgoing_arcs
+    end
+
+    def ingoing_arcs
+      transition.ingoing_arcs
+    end
+
     private
 
     # Executes reset arc logic on fire
@@ -50,8 +63,15 @@ module PetriTester
 
     def consume_tokens!
       @consumed_tokens = transition.input_places.map do |place|
-        kase.remove_token(place).tap do |token|
-          token.data.merge!(params)
+        arc = ingoing_arcs.detect { |arc| arc.from_node == place }
+
+        kase.remove_token(place, color: color).tap do |token|
+          if arc.guard.present?
+            unless token.data.key?(arc.guard)
+              kase.restore_token(token)
+              raise ArgumentError, "Color key '#{arc.guard}' is missing on '#{transition.identifier}' transition"
+            end
+          end
         end
       end.compact
     end
@@ -65,13 +85,11 @@ module PetriTester
 
     def produce_tokens!
       output_places.each do |place|
-        produced_tokens << kase.put_token(place, source: transition)
-
-        if production_callback
-          produced_tokens.each do |token|
-            production_callback.call(token, self)
-          end
-        end
+        token = kase.put_token(place, source: transition)
+        token.data.merge!(color)
+        token.data.merge!(params)
+        production_callback.call(token, self) if production_callback
+        produced_tokens << token
       end
     end
 

@@ -1,0 +1,171 @@
+{
+  "places": [
+    {
+      "guid": "7676d750-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "start",
+      "x": 181,
+      "y": 286,
+      "start": true
+    },
+    {
+      "guid": "7676fe60-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "finish",
+      "x": 942,
+      "y": 290,
+      "finish": true
+    },
+    {
+      "guid": "8670a780-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "painted",
+      "x": 519,
+      "y": 286
+    },
+    {
+      "guid": "d7a6c120-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "autocolor failed",
+      "x": 444,
+      "y": 190
+    },
+    {
+      "guid": "e72d8430-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "autocolored",
+      "x": 731,
+      "y": 197
+    },
+    {
+      "guid": "7017ded0-e7a9-11e5-b275-ebb4cb359af5",
+      "x": 781,
+      "y": 381
+    },
+    {
+      "guid": "b58e7690-e7a9-11e5-b275-ebb4cb359af5",
+      "x": 447,
+      "y": 381
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "79813120-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "Paint",
+      "x": 288,
+      "y": 270
+    },
+    {
+      "guid": "89d3cfb0-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "Pick black color",
+      "x": 762,
+      "y": 274
+    },
+    {
+      "guid": "e0e64ee0-e7a8-11e5-b275-ebb4cb359af5",
+      "identifier": "Filter black color",
+      "x": 544,
+      "y": 179,
+      "automated": true
+    },
+    {
+      "guid": "6eeb6cc0-e7a9-11e5-b275-ebb4cb359af5",
+      "identifier": "Repaint in red",
+      "x": 576,
+      "y": 365,
+      "automated": true
+    },
+    {
+      "guid": "89c0ee80-e7a9-11e5-b275-ebb4cb359af5",
+      "identifier": "Pick green color",
+      "x": 933,
+      "y": 365,
+      "automated": false
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "7981cd60-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "7676d750-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "79813120-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "8670ce90-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "79813120-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "8670a780-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "89d444e0-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "8670a780-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "89d3cfb0-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0,
+      "guard": "color"
+    },
+    {
+      "guid": "90eb9b70-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "89d3cfb0-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "7676fe60-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "d7a6e830-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "79813120-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "d7a6c120-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "e0e6c410-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "d7a6c120-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "e0e64ee0-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0,
+      "guard": "color"
+    },
+    {
+      "guid": "e72dab40-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "e0e64ee0-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "e72d8430-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "e82a81d0-e7a8-11e5-b275-ebb4cb359af5",
+      "from_guid": "e72d8430-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "89d3cfb0-e7a8-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0,
+      "guard": "color"
+    },
+    {
+      "guid": "7017ded1-e7a9-11e5-b275-ebb4cb359af5",
+      "from_guid": "6eeb6cc0-e7a9-11e5-b275-ebb4cb359af5",
+      "to_guid": "7017ded0-e7a9-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "89c163b0-e7a9-11e5-b275-ebb4cb359af5",
+      "from_guid": "7017ded0-e7a9-11e5-b275-ebb4cb359af5",
+      "to_guid": "89c0ee80-e7a9-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0,
+      "guard": "color"
+    },
+    {
+      "guid": "b58e7691-e7a9-11e5-b275-ebb4cb359af5",
+      "from_guid": "79813120-e7a8-11e5-b275-ebb4cb359af5",
+      "to_guid": "b58e7690-e7a9-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "b67442b0-e7a9-11e5-b275-ebb4cb359af5",
+      "from_guid": "b58e7690-e7a9-11e5-b275-ebb4cb359af5",
+      "to_guid": "6eeb6cc0-e7a9-11e5-b275-ebb4cb359af5",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}

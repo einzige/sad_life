@@ -2,7 +2,9 @@ development: &common
   enable_logging: yes
   autoload_paths:
     - app/models
+    - app/actions
     - lib
+    - app/bootstrap
   default_timezone: 'Pacific Time (US & Canada)'
 
 test:

@@ -21,5 +21,13 @@ module Petri
         place.input_arcs.find { |arc| arc.from_node == source_transition }
       end
     end
+
+    def []=(k, v)
+      @data[k] = v
+    end
+
+    def [](k)
+      @data[k]
+    end
   end
 end
