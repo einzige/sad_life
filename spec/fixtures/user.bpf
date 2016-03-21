@@ -432,6 +432,12 @@
       "x": -281,
       "y": 545,
       "automated": true
+    },
+    {
+      "guid": "b27fe8b0-e846-11e5-9bf8-17fe59642bea",
+      "identifier": "Change cost",
+      "x": 381,
+      "y": 618
     }
   ],
   "arcs": [
@@ -1253,6 +1259,20 @@
       "guid": "f26affa0-e7ba-11e5-b275-ebb4cb359af5",
       "from_guid": "e55b7e20-e7ba-11e5-b275-ebb4cb359af5",
       "to_guid": "ece1e4c0-e389-11e5-952a-e368b98b57b7",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "b28084f0-e846-11e5-9bf8-17fe59642bea",
+      "from_guid": "c6ee0e80-e35a-11e5-952a-e368b98b57b7",
+      "to_guid": "b27fe8b0-e846-11e5-9bf8-17fe59642bea",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "b37cbf40-e846-11e5-9bf8-17fe59642bea",
+      "from_guid": "b27fe8b0-e846-11e5-9bf8-17fe59642bea",
+      "to_guid": "c6ee0e80-e35a-11e5-952a-e368b98b57b7",
       "type": "regular",
       "curvature": 0
     }
