@@ -1,0 +1,140 @@
+{
+  "places": [
+    {
+      "guid": "15fd0dc0-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "start",
+      "x": 156,
+      "y": 246,
+      "start": true
+    },
+    {
+      "guid": "15fd0dc1-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "registered",
+      "x": 1135,
+      "y": 280,
+      "finish": true
+    },
+    {
+      "guid": "27e16fe0-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "logged in",
+      "x": 486,
+      "y": 183
+    },
+    {
+      "guid": "4a32fd70-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "new user",
+      "x": 477,
+      "y": 329
+    },
+    {
+      "guid": "596510d0-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "applied",
+      "x": 788,
+      "y": 329
+    }
+  ],
+  "transitions": [
+    {
+      "guid": "2279ec30-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "Login as Admin",
+      "x": 269,
+      "y": 168
+    },
+    {
+      "guid": "2a711b70-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "Create new company",
+      "x": 605,
+      "y": 169
+    },
+    {
+      "guid": "43ba57e0-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "Go to home page",
+      "x": 265,
+      "y": 313
+    },
+    {
+      "guid": "53302b00-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "Apply as a company",
+      "x": 553,
+      "y": 314
+    },
+    {
+      "guid": "5b9696d0-ef61-11e5-b411-111cb4e42a4b",
+      "identifier": "Fill in company details",
+      "x": 876,
+      "y": 314
+    }
+  ],
+  "arcs": [
+    {
+      "guid": "227cd260-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "15fd0dc0-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "2279ec30-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "27e196f0-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "2279ec30-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "27e16fe0-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "2a716990-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "27e16fe0-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "2a711b70-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "41593660-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "2a711b70-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "15fd0dc1-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "43bacd10-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "15fd0dc0-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "43ba57e0-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "4a332480-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "43ba57e0-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "4a32fd70-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "53307920-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "4a32fd70-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "53302b00-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "596537e0-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "53302b00-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "596510d0-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "5b96e4f0-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "596510d0-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "5b9696d0-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    },
+    {
+      "guid": "6297f460-ef61-11e5-b411-111cb4e42a4b",
+      "from_guid": "5b9696d0-ef61-11e5-b411-111cb4e42a4b",
+      "to_guid": "15fd0dc1-ef61-11e5-b411-111cb4e42a4b",
+      "type": "regular",
+      "curvature": 0
+    }
+  ]
+}
